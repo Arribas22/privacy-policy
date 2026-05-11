@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad – Desvío Programado</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           max-width: 760px; margin: 40px auto; padding: 0 20px;
+           color: #1a1a1a; line-height: 1.7; }
+    h1 { font-size: 1.8rem; color: #0E6E82; }
+    h2 { font-size: 1.2rem; color: #0E6E82; margin-top: 2rem; }
+    a  { color: #0E6E82; }
+    footer { margin-top: 3rem; font-size: 0.85rem; color: #666; }
+  </style>
+</head>
+<body>
+
+<h1>Política de Privacidad — Desvío Programado</h1>
+<p><strong>Última actualización:</strong> 11 de mayo de 2026</p>
+
+<p>
+  Esta política de privacidad describe cómo <strong>Desvío Programado</strong>
+  (<em>com.bravosix.callforward</em>), desarrollada por <strong>Arribas AI Systems</strong>,
+  gestiona la información del usuario en dispositivos Android.
+</p>
+
+<!-- ─── 1. Datos que la app NO recopila ─────────────────────────────────── -->
+<h2>1. Datos que la app NO recopila ni transmite</h2>
+<p>
+  Desvío Programado <strong>no recoge, almacena ni envía</strong> ningún dato
+  personal a servidores propios. Toda la información (reglas de desvío,
+  números de teléfono, lista VIP) se guarda <em>exclusivamente</em> en el
+  almacenamiento local del dispositivo y nunca sale de él.
+</p>
+
+<!-- ─── 2. Permisos y su uso ─────────────────────────────────────────────── -->
+<h2>2. Permisos utilizados y su propósito</h2>
+
+<table width="100%" cellpadding="8" style="border-collapse:collapse; font-size:0.95rem;">
+  <thead>
+    <tr style="background:#0E6E82; color:#fff;">
+      <th align="left">Permiso</th>
+      <th align="left">Por qué se necesita</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#f0fafb;">
+      <td><code>READ_PHONE_STATE</code></td>
+      <td>
+        Detectar llamadas entrantes para la función <em>Lista VIP</em>:
+        cuando suena una llamada de un número marcado como VIP mientras hay
+        un desvío condicional activo, la app puede cancelar el desvío para
+        que esa llamada llegue al teléfono. El número llamante <strong>no
+        se almacena ni se comparte</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>READ_CALL_LOG</code></td>
+      <td>
+        Complementa la detección de llamadas entrantes en ciertos modelos
+        Android. Igual que el permiso anterior, los datos no salen del
+        dispositivo.
+      </td>
+    </tr>
+    <tr style="background:#f0fafb;">
+      <td><code>CALL_PHONE</code></td>
+      <td>
+        Marcar automáticamente los códigos MMI
+        (<em>*21*número#</em>, <em>##21#</em>, etc.) que activan y
+        desactivan el desvío de llamadas en la operadora. La app no realiza
+        llamadas a personas.
+      </td>
+    </tr>
+    <tr>
+      <td><code>READ_CONTACTS</code></td>
+      <td>
+        Mostrar el selector de contactos al añadir un número de desvío.
+        La app no importa ni guarda tu agenda de contactos.
+      </td>
+    </tr>
+    <tr style="background:#f0fafb;">
+      <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+      <td>
+        Restaurar los desvíos programados tras reiniciar el dispositivo.
+      </td>
+    </tr>
+    <tr>
+      <td><code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code></td>
+      <td>Ejecutar los desvíos a la hora exacta configurada.</td>
+    </tr>
+    <tr style="background:#f0fafb;">
+      <td><code>POST_NOTIFICATIONS</code></td>
+      <td>Mostrar la notificación persistente de estado en la barra.</td>
+    </tr>
+    <tr>
+      <td><code>FOREGROUND_SERVICE</code></td>
+      <td>
+        Mantener la notificación de estado visible en segundo plano incluso
+        en dispositivos con optimización agresiva de batería (MIUI, One UI).
+      </td>
+    </tr>
+    <tr style="background:#f0fafb;">
+      <td><code>WAKE_LOCK</code> / <code>TURN_SCREEN_ON</code></td>
+      <td>Encender la pantalla para ejecutar el código MMI cuando el
+        dispositivo está bloqueado.</td>
+    </tr>
+    <tr>
+      <td><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code></td>
+      <td>Cargar anuncios de Google AdMob (ver sección 3).</td>
+    </tr>
+    <tr style="background:#f0fafb;">
+      <td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
+      <td>Proponer al usuario excluir la app del ahorro de batería para
+        mejorar la fiabilidad del servicio.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ─── 3. Google AdMob ──────────────────────────────────────────────────── -->
+<h2>3. Publicidad — Google AdMob</h2>
+<p>
+  La versión gratuita de Desvío Programado muestra anuncios a través de
+  <strong>Google AdMob</strong> (Google LLC). AdMob puede recopilar y
+  utilizar ciertos datos del dispositivo para personalizar los anuncios,
+  incluyendo el <em>Advertising ID</em> (identificador de publicidad Android).
+</p>
+<p>
+  Puedes consultar la política de privacidad de Google AdMob aquí:<br/>
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+    https://policies.google.com/privacy
+  </a>
+</p>
+<p>
+  El Advertising ID se puede restablecer o deshabilitar desde:<br/>
+  <strong>Ajustes → Google → Anuncios</strong>.
+</p>
+
+<!-- ─── 4. Google Play Billing ───────────────────────────────────────────── -->
+<h2>4. Compras dentro de la aplicación</h2>
+<p>
+  Las compras opcionales (desbloqueo premium, propina) se procesan
+  íntegramente a través de <strong>Google Play Billing</strong>. Desvío
+  Programado no accede ni almacena datos de pago; éstos son gestionados
+  exclusivamente por Google Play.
+</p>
+
+<!-- ─── 5. Servicios de terceros ────────────────────────────────────────── -->
+<h2>5. Servicios de terceros</h2>
+<p>La app únicamente integra los siguientes servicios de terceros:</p>
+<ul>
+  <li>Google AdMob — publicidad</li>
+  <li>Google Play Billing — compras in-app</li>
+</ul>
+<p>No se integra ningún otro SDK de análisis, rastreo o marketing.</p>
+
+<!-- ─── 6. Menores ──────────────────────────────────────────────────────── -->
+<h2>6. Menores de edad</h2>
+<p>
+  Esta aplicación no está dirigida a menores de 13 años. No recopilamos
+  conscientemente información de menores.
+</p>
+
+<!-- ─── 7. Cambios en la política ───────────────────────────────────────── -->
+<h2>7. Cambios en esta política</h2>
+<p>
+  Cualquier actualización de esta política se publicará en esta misma página.
+  La fecha de la última modificación aparece al inicio del documento.
+</p>
+
+<!-- ─── 8. Contacto ─────────────────────────────────────────────────────── -->
+<h2>8. Contacto</h2>
+<p>
+  Si tienes preguntas sobre esta política de privacidad, puedes escribirnos a:<br/>
+  <a href="mailto:arribeassystems@gmail.com">arribeassystems@gmail.com</a>
+</p>
+
+<footer>
+  © 2026 Arribas AI Systems · Desvío Programado v2.0
+</footer>
+
+</body>
+</html>
