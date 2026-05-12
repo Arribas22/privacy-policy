@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — MindEase</title>
+  <style>
+    :root {
+      --primary: #6750a4;
+      --bg: #f6f0ff;
+      --card: #ffffff;
+      --text: #1c1b1f;
+      --muted: #49454f;
+      --border: #e0d8f0;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px 60px;
+    }
+    .container { max-width: 760px; margin: 0 auto; }
+    header {
+      text-align: center;
+      padding: 36px 0 28px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    header h1 { font-size: 1.75rem; color: var(--primary); margin-bottom: 8px; }
+    header .meta { font-size: 0.85rem; color: var(--muted); }
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    section h2 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 12px; font-size: 0.95rem; }
+    p:last-child { margin-bottom: 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 8px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: var(--bg); font-weight: 600; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: .04em; }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { white-space: nowrap; font-family: monospace; font-size: 0.82rem; color: var(--primary); }
+    ul { padding-left: 20px; font-size: 0.95rem; }
+    ul li { margin-bottom: 6px; }
+    a { color: var(--primary); }
+    .highlight {
+      background: #f3e8ff;
+      border-left: 4px solid var(--primary);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    @media (max-width: 540px) {
+      header h1 { font-size: 1.35rem; }
+      section { padding: 18px 16px; }
+      td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>🧠 Política de Privacidad<br>MindEase</h1>
+    <p class="meta">
+      Última actualización: 12 de mayo de 2026 &nbsp;·&nbsp;
+      Versión 1.0 &nbsp;·&nbsp; com.bravosix.mindease
+    </p>
+  </header>
+
+  <section>
+    <h2>Introducción</h2>
+    <p>
+      Esta política de privacidad describe cómo <strong>MindEase</strong>
+      (<code>com.bravosix.mindease</code>), desarrollada por
+      <strong>Arribas AI Systems</strong>, gestiona la información del usuario en
+      dispositivos Android.
+    </p>
+    <p>
+      MindEase es una app de acompañamiento emocional y salud mental que utiliza un
+      modelo de inteligencia artificial (<strong>Gemma 3 1B</strong>) que se ejecuta
+      <strong>íntegramente en el dispositivo</strong>, sin enviar conversaciones a
+      ningún servidor externo.
+    </p>
+  </section>
+
+  <section>
+    <h2>1. Datos que la app NO recopila ni transmite</h2>
+    <div class="highlight">
+      🔒 El modelo de IA (Gemma 3 1B) funciona completamente <strong>offline</strong>.
+      Tus conversaciones de chat nunca salen del dispositivo.
+    </div>
+    <p>
+      MindEase <strong>no recopila, almacena en servidores ni envía</strong> ningún
+      dato personal a sistemas propios. Toda la información (historial de
+      conversaciones, entradas del diario, preferencias, tokens de uso) se guarda
+      exclusivamente en el almacenamiento local del dispositivo mediante SQLite /
+      Room y <code>SharedPreferences</code>.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Almacenamiento local de datos</h2>
+    <p>Los siguientes datos se guardan <strong>solo en tu dispositivo</strong>:</p>
+    <table>
+      <thead>
+        <tr><th>Dato</th><th>Dónde se guarda</th><th>Propósito</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Historial de chat</td>
+          <td>Base de datos Room (SQLite local)</td>
+          <td>Conservar el historial de conversaciones entre sesiones.</td>
+        </tr>
+        <tr>
+          <td>Entradas del diario</td>
+          <td>Base de datos Room (SQLite local)</td>
+          <td>Guardar reflexiones y registros emocionales.</td>
+        </tr>
+        <tr>
+          <td>Tokens de uso</td>
+          <td>SharedPreferences local</td>
+          <td>Control del sistema de tokens para el chat con IA.</td>
+        </tr>
+        <tr>
+          <td>Consejos de bienestar</td>
+          <td>SharedPreferences local</td>
+          <td>Caché de consejos generados por la IA para notificaciones.</td>
+        </tr>
+        <tr>
+          <td>Preferencias de la app</td>
+          <td>SharedPreferences local</td>
+          <td>Configuración de notificaciones, tema, etc.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px">
+      Puedes eliminar todos estos datos en cualquier momento desinstalando la app o
+      desde <strong>Ajustes → Aplicaciones → MindEase → Borrar datos</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Inteligencia Artificial local — Gemma 3 1B</h2>
+    <p>
+      MindEase incluye el modelo <strong>Gemma 3 1B</strong> (Google DeepMind), que
+      se descarga al dispositivo y se ejecuta localmente mediante el framework
+      <strong>MediaPipe LiteRT</strong>.
+    </p>
+    <p>
+      <strong>El modelo no envía tus mensajes a ningún servidor.</strong>
+      Toda la inferencia ocurre en la CPU/GPU del dispositivo. Las conversaciones
+      permanecen privadas en todo momento.
+    </p>
+    <p>
+      Puedes consultar la política del modelo Gemma aquí:
+      <a href="https://ai.google.dev/gemma/terms" target="_blank" rel="noopener">ai.google.dev/gemma/terms</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Permisos utilizados y su propósito</h2>
+    <table>
+      <thead>
+        <tr><th>Permiso</th><th>Propósito</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>INTERNET /<br>ACCESS_NETWORK_STATE</td>
+          <td>Cargar anuncios de Google AdMob en la versión gratuita
+            y procesar compras in-app a través de Google Play Billing.
+            No se usa para transmitir datos del usuario ni conversaciones.</td>
+        </tr>
+        <tr>
+          <td>POST_NOTIFICATIONS</td>
+          <td>Mostrar notificaciones de bienestar diarias a horas configuradas
+            (9:00, 13:30, 18:00, 22:00) con consejos de salud mental generados
+            por el modelo local.</td>
+        </tr>
+        <tr>
+          <td>RECEIVE_BOOT_COMPLETED</td>
+          <td>Reprogramar las notificaciones de bienestar tras reiniciar el
+            dispositivo, para que los recordatorios diarios sigan funcionando.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>5. Publicidad — Google AdMob</h2>
+    <p>
+      La versión gratuita de MindEase muestra anuncios a través de
+      <strong>Google AdMob</strong> (Google LLC). Esto incluye anuncios de banner
+      y vídeos recompensados (ver vídeo para ganar tokens de uso del chat IA).
+      AdMob puede recopilar y usar ciertos datos del dispositivo para personalizar
+      los anuncios, incluyendo el Advertising ID (identificador de publicidad Android).
+    </p>
+    <p>
+      Puedes consultar la política de privacidad de Google aquí:
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+        policies.google.com/privacy</a>.
+    </p>
+    <p>
+      El Advertising ID se puede restablecer o deshabilitar desde:<br>
+      <strong>Ajustes → Google → Anuncios</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Sistema de tokens y compras in-app</h2>
+    <p>
+      MindEase usa un <strong>sistema de tokens</strong> para el acceso al chat con IA:
+    </p>
+    <ul>
+      <li><strong>5 tokens gratuitos diarios</strong> — se reponen automáticamente cada día.</li>
+      <li><strong>Tokens adicionales</strong> — obtenibles viendo vídeos de AdMob.</li>
+      <li><strong>Packs de tokens</strong> (50 o 200) — compra única procesada por Google Play.</li>
+      <li><strong>Plan Vitalicio</strong> — pago único que desbloquea tokens ilimitados.</li>
+    </ul>
+    <p style="margin-top:12px">
+      Todas las compras se procesan íntegramente a través de
+      <strong>Google Play Billing</strong>. MindEase no accede ni almacena datos de
+      pago; éstos son gestionados exclusivamente por Google Play.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Notificaciones de bienestar</h2>
+    <p>
+      MindEase puede enviar notificaciones de bienestar a horas fijas del día.
+      Los consejos se generan localmente con el modelo Gemma 3 y se almacenan en
+      caché en el dispositivo. No se transmite ningún dato externo para generar
+      estas notificaciones.
+    </p>
+    <p>
+      Puedes desactivar las notificaciones en cualquier momento desde
+      <strong>Ajustes → Aplicaciones → MindEase → Notificaciones</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Servicios de terceros</h2>
+    <p>La app únicamente integra los siguientes servicios de terceros:</p>
+    <ul>
+      <li><strong>Google AdMob</strong> — publicidad en la versión gratuita</li>
+      <li><strong>Google Play Billing</strong> — compras in-app</li>
+      <li><strong>MediaPipe / LiteRT</strong> — ejecución local del modelo de IA (sin conexión de red)</li>
+    </ul>
+    <p>No se integra ningún SDK de análisis, rastreo, crashlytics ni marketing.</p>
+  </section>
+
+  <section>
+    <h2>9. Crisis y salud mental</h2>
+    <p>
+      MindEase es una herramienta de apoyo emocional y <strong>no sustituye a un
+      profesional de salud mental</strong>. Si detecta señales de crisis, la app
+      siempre proporciona el número de atención a conducta suicida
+      <strong>024</strong> (España) y recuerda buscar ayuda profesional.
+    </p>
+    <p>
+      MindEase no diagnostica, prescribe ni almacena información clínica de ningún tipo.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Menores de edad</h2>
+    <p>
+      Esta aplicación no está dirigida a menores de 13 años. No recopilamos
+      conscientemente información de menores.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Cambios en esta política</h2>
+    <p>
+      Cualquier actualización de esta política se publicará en esta misma página.
+      La fecha de la última modificación aparece al inicio del documento.
+    </p>
+  </section>
+
+  <section>
+    <h2>12. Contacto</h2>
+    <p>
+      Si tienes preguntas sobre esta política de privacidad, puedes escribirnos a:<br>
+      <a href="mailto:arribeassystems@gmail.com">arribeassystems@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Arribas AI Systems &nbsp;·&nbsp; MindEase v1.0
+  </footer>
+
+</div>
+</body>
+</html>
