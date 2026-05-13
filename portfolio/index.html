@@ -389,6 +389,15 @@
       color: var(--accent2); border-radius: 6px;
       padding: 3px 10px; font-size: 0.72rem; font-weight: 600;
     }
+    .cert-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      border: 1px solid var(--border-bright);
+      color: var(--text-muted); border-radius: 6px;
+      padding: 3px 10px; font-size: 0.72rem; font-weight: 500;
+      margin-left: 6px;
+      transition: color .15s, border-color .15s;
+    }
+    .cert-link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
 
     /* CONTACT */
     .contact-box {
@@ -449,6 +458,7 @@
     <a href="#android" data-i18n="nav.android">Android</a>
     <a href="#enfusion" data-i18n="nav.enfusion">Enfusion</a>
     <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+    <a href="#infra" data-i18n="nav.infra">Infraestructura</a>
     <a href="#capturas" data-i18n="nav.screenshots">Capturas</a>
     <a href="#tools" data-i18n="nav.tools">Herramientas</a>
     <a href="#certificados" data-i18n="nav.certs">Certificados</a>
@@ -704,6 +714,59 @@
   </div>
 </section>
 
+<!-- INFRAESTRUCTURA -->
+<section id="infra" style="background: var(--surface); padding: 80px 0;">
+  <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
+    <div class="section-label" data-i18n="infra.label">Infraestructura &amp; DevOps</div>
+    <h2 class="section-title" data-i18n="infra.title">Administración de Servidores &amp; Sistemas</h2>
+    <p class="section-desc" data-i18n="infra.desc">Gestión de entornos de servidor reales: VPS Windows Server en producción, configuración de red, seguridad activa y deploys de servicios web y bases de datos.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3 data-i18n="infra.c1.h">VPS &amp; Windows Server</h3>
+        <p data-i18n="infra.c1.p">Administración de servidores VPS dedicados en entornos Windows Server: configuración de roles, gestión de usuarios, remote desktop, actualizaciones y mantenimiento del sistema en producción.</p>
+        <div style="margin-top:12px">
+          <span class="tag">Windows Server</span>
+          <span class="tag">VPS</span>
+          <span class="tag">RDP</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔥</div>
+        <h3 data-i18n="infra.c2.h">Firewall &amp; Seguridad de Red</h3>
+        <p data-i18n="infra.c2.p">Configuración de reglas de firewall, auditoría de puertos abiertos, análisis de tráfico de red y detección de vulnerabilidades. Endurecimiento del servidor para entornos de juego en producción con tráfico real de jugadores.</p>
+        <div style="margin-top:12px">
+          <span class="tag">Firewall</span>
+          <span class="tag">Port auditing</span>
+          <span class="tag">Network analysis</span>
+          <span class="tag">Hardening</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3 data-i18n="infra.c3.h">XAMPP &amp; Servicios Web</h3>
+        <p data-i18n="infra.c3.p">Despliegue de servidores Apache y MySQL con XAMPP: configuración de virtual hosts, gestión de bases de datos SQL, acceso remoto seguro y mantenimiento de servicios web auxiliares.</p>
+        <div style="margin-top:12px">
+          <span class="tag">Apache</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">XAMPP</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3 data-i18n="infra.c4.h">Aprendizaje en Cualquier Entorno</h3>
+        <p data-i18n="infra.c4.p">Capacidad demostrada para operar y desarrollar en cualquier sistema, lenguaje o plataforma. Con IA como copiloto y criterio propio como director, puedo incorporar cualquier tecnología nueva y llevarla a resultados reales en tiempo mínimo.</p>
+        <div style="margin-top:12px">
+          <span class="tag">Adaptabilidad</span>
+          <span class="tag">Multi-stack</span>
+          <span class="tag">AI-powered learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SCREENSHOTS -->
 <div class="screenshots-section" id="capturas">
   <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
@@ -791,6 +854,18 @@
     </div>
 
     <div style="margin-bottom:36px;">
+      <h3 style="font-size:0.95rem; color:var(--text-muted); font-weight:600; margin-bottom:16px;" data-i18n="tools.h4">Servidores MCP &amp; Automatización</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:14px; max-width:680px;" data-i18n="tools.mcp.desc">Configuración e integración de servidores MCP personalizados en agentes de IA locales. Permiten extender las capacidades del agente con herramientas propias, memoria persistente y contexto especializado por proyecto.</p>
+      <div class="tools-grid">
+        <div class="tool-chip tool-primary">🧠 Engram (memoria persistente)</div>
+        <div class="tool-chip tool-primary">📚 Context7 (docs en tiempo real)</div>
+        <div class="tool-chip">MCP personalizado</div>
+        <div class="tool-chip">GitHub Copilot Agent Mode</div>
+        <div class="tool-chip">Skills &amp; Instructions</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:36px;">
       <h3 style="font-size:0.95rem; color:var(--text-muted); font-weight:600; margin-bottom:16px;" data-i18n="tools.h2">Stack tecnológico</h3>
       <div class="tools-grid">
         <div class="tool-chip">Android Studio</div>
@@ -873,6 +948,7 @@
         <div class="cert-title">Claude 101</div>
         <div class="cert-meta" data-i18n="cert1.meta">Emitido: 11 de mayo de 2026 · Nº fgc3ws7upbph</div>
         <span class="cert-badge" data-i18n="cert.badge">✓ Completado</span>
+        <a href="#" class="cert-link" data-i18n="cert.link">📄 Ver certificado</a>
       </div>
     </div>
     <div class="cert-card">
@@ -882,12 +958,21 @@
         <div class="cert-title">Claude Code 101</div>
         <div class="cert-meta" data-i18n="cert2.meta">Emitido: 11 de mayo de 2026</div>
         <span class="cert-badge" data-i18n="cert.badge">✓ Completado</span>
+        <a href="#" class="cert-link" data-i18n="cert.link">📄 Ver certificado</a>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-logo">🤝</div>
+      <div class="cert-body">
+        <div class="cert-issuer">Anthropic</div>
+        <div class="cert-title" data-i18n="cert3.title">Introduction to Claude Cowork</div>
+        <div class="cert-meta" data-i18n="cert3.meta">Emitido: 13 de mayo de 2026</div>
+        <span class="cert-badge" data-i18n="cert.badge">✓ Completado</span>
+        <a href="certs/claude-cowork.pdf" class="cert-link" target="_blank" rel="noopener noreferrer" data-i18n="cert.link">📄 Ver certificado</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- CONTACTO -->
 <section id="contacto">
   <div class="contact-box">
     <div class="contact-inner">
@@ -914,6 +999,7 @@
 const T = {
   es: {
     'nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Proyectos',
+    'nav.infra':'Infraestructura',
     'nav.screenshots':'Capturas','nav.tools':'Herramientas','nav.certs':'Certificados','nav.contact':'Contacto',
     'hero.badge':'Disponible para proyectos','hero.subtitle':'Desarrollador de Software',
     'hero.desc':'Android nativo con IA local offline &middot; Game systems en EnforceScript/Enfusion &middot; Más de 2000 horas impulsado por GitHub Copilot',
@@ -955,18 +1041,29 @@ const T = {
     'tools.label':'Herramientas &amp; Flujo de Trabajo','tools.title':'Desarrollo Asistido por IA',
     'tools.desc':'Más de 2000 horas de desarrollo con GitHub Copilot en VS Code. Uso avanzado de modelos de lenguaje para acelerar el ciclo de desarrollo, arquitectura de sistemas complejos y resolución de problemas.',
     'tools.h1':'Herramientas principales','tools.h2':'Stack tecnológico','tools.h3':'Evolución del backend · bases de datos',
+    'tools.h4':'Servidores MCP &amp; Automatización',
+    'tools.mcp.desc':'Configuración e integración de servidores MCP personalizados en agentes de IA locales. Permiten extender las capacidades del agente con herramientas propias, memoria persistente y contexto especializado por proyecto.',
     'db.f1':'Fase 1','db.f1l':'Archivos .json por jugador','db.f2':'Fase 2','db.f2l':'Consultas flexibles, NoSQL','db.f3':'Fase 3 · Actual','db.f3l':'Persistencia relacional completa',
     'phi.label':'Filosofía','phi.title':'Cómo trabajo','phi.desc':'Principios que guían cada proyecto.',
     'phi1.h':'Privacidad sin compromiso','phi1.p':'Si un modelo puede correr en el dispositivo, corre en el dispositivo. Recopilo solo los datos estrictamente necesarios para que la app funcione.',
     'phi2.h':'Sistemas que escalan','phi2.p':'Diseño arquitecturas que soportan crecimiento: desde un componente de persistencia hasta un framework con 20+ sistemas interconectados en tiempo real.',
     'phi3.h':'IA como copiloto, no sustituto','phi3.p':'2000+ horas usando IA para desarrollar más rápido y mejor. Sé cuándo confiar en el modelo y cuándo el criterio humano es irremplazable.',
     'certs.label':'Formación certificada','certs.title':'Certificados','certs.desc':'Certificados de finalización en tecnologías de IA y desarrollo asistido. Sección en expansión.',
-    'cert1.meta':'Emitido: 11 de mayo de 2026 · Nº fgc3ws7upbph','cert2.meta':'Emitido: 11 de mayo de 2026','cert.badge':'✓ Completado',
+    'cert1.meta':'Emitido: 11 de mayo de 2026 · Nº fgc3ws7upbph','cert2.meta':'Emitido: 11 de mayo de 2026',
+    'cert3.title':'Introduction to Claude Cowork','cert3.meta':'Emitido: 13 de mayo de 2026',
+    'cert.badge':'✓ Completado','cert.link':'📄 Ver certificado',
+    'infra.label':'Infraestructura &amp; DevOps','infra.title':'Administración de Servidores &amp; Sistemas',
+    'infra.desc':'Gestión de entornos de servidor reales: VPS Windows Server en producción, configuración de red, seguridad activa y deploys de servicios web y bases de datos.',
+    'infra.c1.h':'VPS &amp; Windows Server','infra.c1.p':'Administración de servidores VPS dedicados en entornos Windows Server: configuración de roles, gestión de usuarios, remote desktop, actualizaciones y mantenimiento del sistema en producción.',
+    'infra.c2.h':'Firewall &amp; Seguridad de Red','infra.c2.p':'Configuración de reglas de firewall, auditoría de puertos abiertos, análisis de tráfico de red y detección de vulnerabilidades. Endurecimiento del servidor para entornos de juego en producción con tráfico real de jugadores.',
+    'infra.c3.h':'XAMPP &amp; Servicios Web','infra.c3.p':'Despliegue de servidores Apache y MySQL con XAMPP: configuración de virtual hosts, gestión de bases de datos SQL, acceso remoto seguro y mantenimiento de servicios web auxiliares.',
+    'infra.c4.h':'Aprendizaje en Cualquier Entorno','infra.c4.p':'Capacidad demostrada para operar y desarrollar en cualquier sistema, lenguaje o plataforma. Con IA como copiloto y criterio propio como director, puedo incorporar cualquier tecnología nueva y llevarla a resultados reales en tiempo mínimo.',
     'contact.title':'¿Hablamos?','contact.desc':'Abierto a proyectos de desarrollo Android, integraciones de IA, sistemas de juego y consultoría técnica.',
     'footer.made':'Desarrollado con GitHub Copilot &amp; Claude',
   },
   en: {
     'nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Projects',
+    'nav.infra':'Infrastructure',
     'nav.screenshots':'Screenshots','nav.tools':'Tools','nav.certs':'Certificates','nav.contact':'Contact',
     'hero.badge':'Available for projects','hero.subtitle':'Software Developer',
     'hero.desc':'Native Android with local offline AI &middot; Game systems in EnforceScript/Enfusion &middot; Over 2000 hours powered by GitHub Copilot',
@@ -1008,13 +1105,23 @@ const T = {
     'tools.label':'Tools &amp; Workflow','tools.title':'AI-Assisted Development',
     'tools.desc':'Over 2000 hours of development with GitHub Copilot in VS Code. Advanced use of language models to accelerate the development cycle, complex system architecture and problem solving.',
     'tools.h1':'Main tools','tools.h2':'Tech stack','tools.h3':'Backend evolution · databases',
+    'tools.h4':'MCP Servers &amp; Automation',
+    'tools.mcp.desc':'Configuration and integration of custom MCP servers in local AI agents. They extend the agent\'s capabilities with custom tools, persistent memory and project-specific context.',
     'db.f1':'Phase 1','db.f1l':'Local .json files per player','db.f2':'Phase 2','db.f2l':'Flexible queries, NoSQL','db.f3':'Phase 3 · Current','db.f3l':'Complete relational persistence',
     'phi.label':'Philosophy','phi.title':'How I work','phi.desc':'Principles that guide every project.',
     'phi1.h':'Privacy without compromise','phi1.p':'If a model can run on the device, it runs on the device. I only collect the data strictly necessary for the app to function.',
     'phi2.h':'Systems that scale','phi2.p':'I design architectures that support growth: from a persistence component to a framework with 20+ interconnected real-time systems.',
     'phi3.h':'AI as copilot, not substitute','phi3.p':'2000+ hours using AI to develop faster and better. I know when to trust the model and when human judgment is irreplaceable.',
     'certs.label':'Certified training','certs.title':'Certificates','certs.desc':'Completion certificates in AI technologies and assisted development. Section expanding.',
-    'cert1.meta':'Issued: May 11, 2026 · No. fgc3ws7upbph','cert2.meta':'Issued: May 11, 2026','cert.badge':'✓ Completed',
+    'cert1.meta':'Issued: May 11, 2026 · No. fgc3ws7upbph','cert2.meta':'Issued: May 11, 2026',
+    'cert3.title':'Introduction to Claude Cowork','cert3.meta':'Issued: May 13, 2026',
+    'cert.badge':'✓ Completed','cert.link':'📄 View certificate',
+    'infra.label':'Infrastructure &amp; DevOps','infra.title':'Server &amp; Systems Administration',
+    'infra.desc':'Management of real server environments: Windows Server VPS in production, network configuration, active security and web service and database deployments.',
+    'infra.c1.h':'VPS &amp; Windows Server','infra.c1.p':'Administration of dedicated VPS servers in Windows Server environments: role configuration, user management, remote desktop, updates and production system maintenance.',
+    'infra.c2.h':'Firewall &amp; Network Security','infra.c2.p':'Firewall rule configuration, open port auditing, network traffic analysis and vulnerability detection. Server hardening for production game environments with real player traffic.',
+    'infra.c3.h':'XAMPP &amp; Web Services','infra.c3.p':'Deployment of Apache and MySQL servers with XAMPP: virtual host configuration, SQL database management, secure remote access and auxiliary web service maintenance.',
+    'infra.c4.h':'Learning in Any Environment','infra.c4.p':'Demonstrated ability to operate and develop in any system, language or platform. With AI as copilot and own judgment as director, I can incorporate any new technology and deliver real results in minimum time.',
     'contact.title':'Shall we talk?','contact.desc':'Open to Android development projects, AI integrations, game systems and technical consulting.',
     'footer.made':'Built with GitHub Copilot &amp; Claude',
   }
