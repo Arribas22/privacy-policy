@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Álvaro Arribas — Desarrollador de Software</title>
+  <meta name="description" content="Portfolio de Álvaro Arribas. Desarrollador Android con IA local, sistemas RP en EnforceScript/Enfusion y desarrollo asistido por IA." />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2430;
+      --border: #30363d;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --accent3: #f78166;
+      --accent4: #d2a8ff;
+      --gradient: linear-gradient(135deg, #58a6ff 0%, #d2a8ff 100%);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,17,23,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-brand { font-weight: 700; font-size: 1.1rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 24px; font-size: 0.9rem; }
+    .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* HERO */
+    .hero {
+      padding: 100px 24px 80px;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+    .hero-cta {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+    }
+    .btn {
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity .15s;
+    }
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+    .btn-primary { background: var(--accent); color: #0d1117; }
+    .btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+    /* STATS */
+    .stats-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 24px;
+      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--accent); display: block; }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .section-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 48px;
+    }
+
+    /* CARDS GRID */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: border-color .2s, transform .2s;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card-icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .card p { font-size: 0.9rem; color: var(--text-muted); }
+    .tag {
+      display: inline-block;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 4px 2px 0;
+    }
+
+    /* PROJECTS */
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      transition: border-color .2s;
+    }
+    .project-card:hover { border-color: var(--accent); }
+    .project-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+    .project-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; }
+    .project-status {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.8rem; padding: 4px 12px; border-radius: 20px;
+      white-space: nowrap;
+    }
+    .status-live { background: rgba(63,185,80,.15); color: var(--accent2); border: 1px solid rgba(63,185,80,.3); }
+    .status-dev  { background: rgba(88,166,255,.15); color: var(--accent); border: 1px solid rgba(88,166,255,.3); }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* SYSTEMS LIST */
+    .systems-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .system-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .system-item span:first-child { font-size: 1.2rem; }
+    .system-item span:last-child { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* TOOLS */
+    .tools-grid {
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .tool-chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .tool-primary { border-color: var(--accent); color: var(--accent); }
+
+    /* TIMELINE */
+    .timeline { padding-left: 20px; border-left: 2px solid var(--border); }
+    .timeline-item { position: relative; padding: 0 0 32px 24px; }
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: -6px; top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%; background: var(--accent);
+    }
+    .timeline-date { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; }
+    .timeline-title { font-weight: 600; margin-bottom: 6px; }
+    .timeline-body { font-size: 0.9rem; color: var(--text-muted); }
+
+    /* CONTACT */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-box h2 { font-size: 1.8rem; margin-bottom: 12px; }
+    .contact-box p { color: var(--text-muted); margin-bottom: 28px; }
+    .contact-email {
+      font-size: 1.1rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .project-card { grid-template-columns: 1fr; }
+      .stats-bar { gap: 28px; }
+      nav .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">Álvaro Arribas</span>
+  <div class="nav-links">
+    <a href="#android">Android</a>
+    <a href="#enfusion">Enfusion</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#tools">Herramientas</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🚀 Disponible para proyectos</div>
+  <h1>Álvaro Arribas<br/>Desarrollador de Software</h1>
+  <p>Especializado en aplicaciones Android con IA local offline, sistemas de juego en EnforceScript/Enfusion y desarrollo asistido por inteligencia artificial.</p>
+  <div class="hero-cta">
+    <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+    <a href="#contacto" class="btn btn-secondary">Contactar</a>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <span class="stat-value">2000+</span>
+    <span class="stat-label">Horas VS Code + Copilot</span>
+  </div>
+  <div class="stat">
+    <span class="stat-value">100%</span>
+    <span class="stat-label">Kotlin &amp; Jetpack Compose</span>
+  </div>
+  <div class="stat">
+    <span class="stat-value">3+</span>
+    <span class="stat-label">Apps publicadas</span>
+  </div>
+  <div class="stat">
+    <span class="stat-value">20+</span>
+    <span class="stat-label">Sistemas RP desarrollados</span>
+  </div>
+</div>
+
+<!-- ANDROID + IA -->
+<section id="android">
+  <div class="section-label">Android · IA Local</div>
+  <h2 class="section-title">Aplicaciones Android con IA Offline</h2>
+  <p class="section-desc">Desarrollo aplicaciones nativas con modelos de IA que se ejecutan completamente en el dispositivo, sin enviar datos a servidores externos. Privacidad real, no marketing.</p>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h3>IA Local con MediaPipe</h3>
+      <p>Integración de Gemma 3 1B (529 MB) directamente en el APK usando MediaPipe Tasks GenAI. Inferencia completamente offline, sin APIs externas, sin recopilación de datos.</p>
+      <div style="margin-top:12px">
+        <span class="tag">MediaPipe</span>
+        <span class="tag">Gemma 3 1B</span>
+        <span class="tag">LlmInference</span>
+        <span class="tag">Offline</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏗️</div>
+      <h3>Arquitectura Moderna</h3>
+      <p>Stack tecnológico actual: Kotlin 100%, Jetpack Compose + Material3, Room, ViewModel, WorkManager, DataStore y Navigation Compose.</p>
+      <div style="margin-top:12px">
+        <span class="tag">Kotlin</span>
+        <span class="tag">Compose</span>
+        <span class="tag">Room</span>
+        <span class="tag">MVVM</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💰</div>
+      <h3>Monetización Completa</h3>
+      <p>Sistema de tokens (free/earned/purchased), anuncios recompensados con AdMob, compras in-app con Google Play Billing 6.x y plan vitalicio one-time purchase.</p>
+      <div style="margin-top:12px">
+        <span class="tag">Play Billing</span>
+        <span class="tag">AdMob</span>
+        <span class="tag">Tokens</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔒</div>
+      <h3>Privacidad por Diseño</h3>
+      <p>Sin analytics invasivos, sin permisos innecesarios, sin envío de conversaciones a la nube. El modelo corre íntegramente en el chip del usuario.</p>
+      <div style="margin-top:12px">
+        <span class="tag">Privacy First</span>
+        <span class="tag">On-Device ML</span>
+        <span class="tag">GDPR</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENFUSION -->
+<section id="enfusion" style="background: var(--surface); padding: 80px 0;">
+  <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
+    <div class="section-label">Enfusion Engine · EnforceScript</div>
+    <h2 class="section-title">Game Systems Engineering</h2>
+    <p class="section-desc">EnforceScript es un lenguaje derivado de C orientado a objetos que potencia el motor Enfusion (Arma Reforger / DayZ). He desarrollado un framework RP completo que va desde sistemas de gameplay hasta infraestructura de persistencia backend.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:36px;">
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>Backend de Persistencia</h3>
+        <p>Integración con <strong>progressSQL</strong> para almacenamiento total del progreso de jugadores entre sesiones. Lectura/escritura asíncrona desde el servidor dedicado. Sistema de save data serializable por componente (EPF).</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔌</div>
+        <h3>Proxy de Conexión Personalizado</h3>
+        <p>Proxy propio para la comunicación entre el servidor de juego y la base de datos externa. Manejo de reintentos, carga asíncrona y callbacks para garantizar integridad de datos en reinicios del servidor.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem; font-weight:600; margin-bottom:16px; color:var(--text-muted)">Sistemas implementados en DistritoHispanoRP</h3>
+    <div class="systems-list">
+      <div class="system-item"><span>🏦</span><span>Sistema bancario y economía</span></div>
+      <div class="system-item"><span>🚗</span><span>Garage &amp; gestión de vehículos</span></div>
+      <div class="system-item"><span>🛒</span><span>Concesionario con preview 3D</span></div>
+      <div class="system-item"><span>📍</span><span>GPS y sistema de mapa</span></div>
+      <div class="system-item"><span>📱</span><span>Sistema de teléfono y contactos</span></div>
+      <div class="system-item"><span>👤</span><span>Personajes persistentes (hasta 2/jugador)</span></div>
+      <div class="system-item"><span>💼</span><span>Sistema de trabajos/empleos</span></div>
+      <div class="system-item"><span>🏠</span><span>Sistema de apartamentos</span></div>
+      <div class="system-item"><span>⭐</span><span>Niveles y experiencia de jugador</span></div>
+      <div class="system-item"><span>👥</span><span>Grupos y organizaciones</span></div>
+      <div class="system-item"><span>🚔</span><span>Sistema criminal y policía</span></div>
+      <div class="system-item"><span>🌾</span><span>Recolección de recursos</span></div>
+      <div class="system-item"><span>🧪</span><span>Laboratorio y producción</span></div>
+      <div class="system-item"><span>🎮</span><span>Soporte gamepad dual system</span></div>
+      <div class="system-item"><span>🎯</span><span>Misiones y objetivos</span></div>
+      <div class="system-item"><span>🔔</span><span>Notificaciones &amp; HUD</span></div>
+      <div class="system-item"><span>🚦</span><span>Semáforos y tráfico</span></div>
+      <div class="system-item"><span>🏪</span><span>Almacenes y stock persistente</span></div>
+      <div class="system-item"><span>🔑</span><span>Sistema de llaves de vehículos</span></div>
+      <div class="system-item"><span>📊</span><span>Admin panel y estadísticas</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="section-label">Portfolio</div>
+  <h2 class="section-title">Proyectos Destacados</h2>
+  <p class="section-desc">Aplicaciones publicadas y sistemas en activo.</p>
+
+  <div class="project-card">
+    <div>
+      <div class="project-title">🧠 MindEase — Bienestar Mental con IA Local</div>
+      <div class="project-desc">
+        App Android de salud mental que incorpora Gemma 3 1B completamente offline. Check-in diario de estado emocional, chat terapéutico con IA, diario personal, ejercicios de bienestar guiados y análisis de tendencias. Todo sin enviar datos al exterior.
+      </div>
+      <div>
+        <span class="tag">Kotlin</span>
+        <span class="tag">Jetpack Compose</span>
+        <span class="tag">Gemma 3 1B</span>
+        <span class="tag">MediaPipe</span>
+        <span class="tag">Room</span>
+        <span class="tag">AdMob</span>
+        <span class="tag">Play Billing</span>
+        <span class="tag">WorkManager</span>
+      </div>
+    </div>
+    <span class="project-status status-dev"><span class="dot"></span>En desarrollo</span>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <div class="project-title">📞 Desvío Programado — Call Forward Scheduler</div>
+      <div class="project-desc">
+        Aplicación Android para programar el desvío de llamadas de forma automática. Permite configurar desvíos por horario, tipo de llamada y condiciones. Publicada en Google Play Store.
+      </div>
+      <div>
+        <span class="tag">Kotlin</span>
+        <span class="tag">Jetpack Compose</span>
+        <span class="tag">Android Telephony</span>
+        <span class="tag">WorkManager</span>
+      </div>
+    </div>
+    <span class="project-status status-live"><span class="dot"></span>Publicada</span>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <div class="project-title">🎮 Distrito Hispano RP — Framework Arma Reforger</div>
+      <div class="project-desc">
+        Framework RP completo para servidor dedicado de Arma Reforger. Más de 20 sistemas interconectados, backend SQL propio, proxy de conexión personalizado y persistencia total del estado del servidor entre reinicios.
+      </div>
+      <div>
+        <span class="tag">EnforceScript</span>
+        <span class="tag">Enfusion Engine</span>
+        <span class="tag">progressSQL</span>
+        <span class="tag">Proxy personalizado</span>
+        <span class="tag">OOP</span>
+        <span class="tag">Server-Client RPC</span>
+      </div>
+    </div>
+    <span class="project-status status-live"><span class="dot"></span>En producción</span>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <div class="project-title">📹 Call Recorder — Grabadora de Llamadas</div>
+      <div class="project-desc">
+        Aplicación Android para grabación y gestión de llamadas telefónicas. Arquitectura MVVM con Room para almacenamiento local de grabaciones.
+      </div>
+      <div>
+        <span class="tag">Kotlin</span>
+        <span class="tag">MVVM</span>
+        <span class="tag">Room</span>
+        <span class="tag">Android Audio</span>
+      </div>
+    </div>
+    <span class="project-status status-dev"><span class="dot"></span>En desarrollo</span>
+  </div>
+</section>
+
+<!-- TOOLS / AI DEV -->
+<section id="tools" style="background: var(--surface); padding: 80px 0;">
+  <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
+    <div class="section-label">Herramientas &amp; Flujo de Trabajo</div>
+    <h2 class="section-title">Desarrollo Asistido por IA</h2>
+    <p class="section-desc">Más de 2000 horas de desarrollo con GitHub Copilot en VS Code. Uso avanzado de modelos de lenguaje para acelerar el ciclo de desarrollo, arquitectura de sistemas complejos y resolución de problemas.</p>
+
+    <div style="margin-bottom: 36px;">
+      <h3 style="font-size:0.95rem; color:var(--text-muted); font-weight:600; margin-bottom:16px;">Herramientas principales</h3>
+      <div class="tools-grid">
+        <div class="tool-chip tool-primary">⭐ VS Code + GitHub Copilot</div>
+        <div class="tool-chip">Claude Sonnet / Opus</div>
+        <div class="tool-chip">OpenAI Codex</div>
+        <div class="tool-chip">Gemini</div>
+        <div class="tool-chip">Cursor</div>
+        <div class="tool-chip">Antigravity</div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="font-size:0.95rem; color:var(--text-muted); font-weight:600; margin-bottom:16px;">Stack tecnológico</h3>
+      <div class="tools-grid">
+        <div class="tool-chip">Android Studio</div>
+        <div class="tool-chip">Kotlin 1.9</div>
+        <div class="tool-chip">Jetpack Compose</div>
+        <div class="tool-chip">Material3</div>
+        <div class="tool-chip">Room / SQLite</div>
+        <div class="tool-chip">Gradle KTS</div>
+        <div class="tool-chip">GitHub CLI</div>
+        <div class="tool-chip">MediaPipe GenAI</div>
+        <div class="tool-chip">Enfusion SDK</div>
+        <div class="tool-chip">EnforceScript</div>
+        <div class="tool-chip">progressSQL</div>
+        <div class="tool-chip">Google AdMob</div>
+        <div class="tool-chip">Play Billing API</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section>
+  <div class="section-label">Filosofía</div>
+  <h2 class="section-title">Cómo trabajo</h2>
+  <p class="section-desc">Principios que guían cada proyecto.</p>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">🛡️</div>
+      <h3>Privacidad sin compromiso</h3>
+      <p>Si un modelo puede correr en el dispositivo, corre en el dispositivo. Recopilo solo los datos estrictamente necesarios para que la app funcione.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h3>Sistemas que escalan</h3>
+      <p>Diseño arquitecturas que soportan crecimiento: desde un componente de persistencia hasta un framework con 20+ sistemas interconectados en tiempo real.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤝</div>
+      <h3>IA como copiloto, no sustituto</h3>
+      <p>2000+ horas usando IA para desarrollar más rápido y mejor. Sé cuándo confiar en el modelo y cuándo el criterio humano es irremplazable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contact-box">
+    <h2>¿Hablamos?</h2>
+    <p>Abierto a proyectos de desarrollo Android, sistemas de juego, integraciones de IA y consultoría técnica.</p>
+    <a href="mailto:arribeassystems@gmail.com" class="contact-email">arribeassystems@gmail.com</a>
+    <br/><br/>
+    <a href="https://github.com/Arribas22" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub: Arribas22</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Álvaro Arribas · Desarrollado con precisión y GitHub Copilot</p>
+</footer>
+
+</body>
+</html>
