@@ -225,7 +225,77 @@
     .timeline-title { font-weight: 600; margin-bottom: 6px; }
     .timeline-body { font-size: 0.9rem; color: var(--text-muted); }
 
+    /* SCREENSHOTS */
+    .screenshots-section { background: var(--surface); padding: 80px 0; }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .screenshot-wrap {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .phone-frame {
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 9/19.5;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .phone-frame img {
+      width: 100%; height: 100%; object-fit: cover; border-radius: 22px;
+    }
+    .phone-frame .placeholder-screen {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 8px; padding: 16px; text-align: center;
+    }
+    .phone-frame .placeholder-screen span { font-size: 2rem; }
+    .phone-frame .placeholder-screen p { font-size: 0.7rem; color: var(--text-muted); }
+    .screenshot-label { font-size: 0.75rem; color: var(--text-muted); text-align: center; }
+    .app-group-title {
+      font-size: 0.85rem; font-weight: 600; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 1px;
+      margin: 32px 0 16px;
+    }
+
+    /* CERTIFICATES */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .cert-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      display: flex; gap: 20px; align-items: flex-start;
+      transition: border-color .2s, transform .2s;
+    }
+    .cert-card:hover { border-color: var(--accent4); transform: translateY(-2px); }
+    .cert-logo {
+      width: 52px; height: 52px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(210,168,255,.2), rgba(88,166,255,.2));
+      border: 1px solid rgba(210,168,255,.3);
+    }
+    .cert-body { flex: 1; }
+    .cert-issuer { font-size: 0.75rem; color: var(--accent4); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .cert-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .cert-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px; }
+    .cert-badge {
+      display: inline-block;
+      background: rgba(63,185,80,.12); border: 1px solid rgba(63,185,80,.3);
+      color: var(--accent2); border-radius: 4px;
+      padding: 2px 10px; font-size: 0.75rem; font-weight: 600;
+    }
+
     /* CONTACT */
+
     .contact-box {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -271,7 +341,9 @@
     <a href="#android">Android</a>
     <a href="#enfusion">Enfusion</a>
     <a href="#proyectos">Proyectos</a>
+    <a href="#capturas">Capturas</a>
     <a href="#tools">Herramientas</a>
+    <a href="#certificados">Certificados</a>
     <a href="#contacto">Contacto</a>
   </div>
 </nav>
@@ -363,19 +435,36 @@
 <section id="enfusion" style="background: var(--surface); padding: 80px 0;">
   <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
     <div class="section-label">Enfusion Engine · EnforceScript</div>
-    <h2 class="section-title">Game Systems Engineering</h2>
-    <p class="section-desc">EnforceScript es un lenguaje derivado de C orientado a objetos que potencia el motor Enfusion (Arma Reforger / DayZ). He desarrollado un framework RP completo que va desde sistemas de gameplay hasta infraestructura de persistencia backend.</p>
+    <h2 class="section-title">Game Systems Engineering — Full Stack</h2>
+    <p class="section-desc">EnforceScript es un lenguaje derivado de C orientado a objetos que potencia el motor Enfusion (Arma Reforger). He diseñado e implementado el framework RP íntegramente: <strong>lado cliente</strong> (todas las interfaces de usuario, HUDs, menús y lógica del jugador) y <strong>lado servidor</strong> (autoridad de juego, persistencia, seguridad y backend de datos).</p>
 
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:36px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-bottom:36px;">
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3>Frontend — Lado Cliente</h3>
+        <p>Desarrollo completo de todas las interfaces de usuario en Enfusion UI: menús de personaje, HUD, teléfono, tiendas, garage, GPS, chat y notificaciones en pantalla. Toda la lógica del lado cliente y los RPCs de comunicación con el servidor.</p>
+      </div>
       <div class="card">
         <div class="card-icon">⚙️</div>
-        <h3>Backend de Persistencia</h3>
-        <p>Integración con <strong>progressSQL</strong> para almacenamiento total del progreso de jugadores entre sesiones. Lectura/escritura asíncrona desde el servidor dedicado. Sistema de save data serializable por componente (EPF).</p>
+        <h3>Backend — Lado Servidor</h3>
+        <p>Autoridad completa del servidor: economía, inventarios, vehículos, grupos y misiones. Integración con <strong>progressSQL</strong> para persistencia total. Sistema de save data serializable por componente (EPF). Lectura/escritura asíncrona entre reinicios.</p>
       </div>
       <div class="card">
         <div class="card-icon">🔌</div>
         <h3>Proxy de Conexión Personalizado</h3>
-        <p>Proxy propio para la comunicación entre el servidor de juego y la base de datos externa. Manejo de reintentos, carga asíncrona y callbacks para garantizar integridad de datos en reinicios del servidor.</p>
+        <p>Proxy propio para la comunicación entre el servidor de juego y la base de datos externa. Manejo de reintentos, carga asíncrona y callbacks que garantizan integridad de datos.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗄️</div>
+        <h3>Evolución del Backend de Datos</h3>
+        <p>El sistema empezó con <strong>archivos .json locales</strong>, escaló a <strong>MongoDB</strong> para consultas flexibles y finalmente migró a <strong>progressSQL</strong> para máximo rendimiento y persistencia relacional.</p>
+        <div style="margin-top:10px">
+          <span class="tag">JSON</span>
+          <span style="color:var(--text-muted);font-size:.8rem;margin:0 4px">→</span>
+          <span class="tag">MongoDB</span>
+          <span style="color:var(--text-muted);font-size:.8rem;margin:0 4px">→</span>
+          <span class="tag">progressSQL</span>
+        </div>
       </div>
     </div>
 
@@ -482,6 +571,73 @@
   </div>
 </section>
 
+<!-- SCREENSHOTS -->
+<div class="screenshots-section" id="capturas">
+  <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
+    <div class="section-label">Apps en acción</div>
+    <h2 class="section-title">Capturas de pantalla</h2>
+    <p class="section-desc" style="margin-bottom:8px;">Pantallas reales de las aplicaciones en dispositivos físicos.</p>
+
+    <div class="app-group-title">📞 Desvío Programado</div>
+    <div class="screenshot-grid">
+      <div class="screenshot-wrap">
+        <div class="phone-frame">
+          <img src="img/desvio1.jpg" alt="Desvío Programado — Pantalla principal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="placeholder-screen" style="display:none"><span>📞</span><p>Pantalla principal</p></div>
+        </div>
+        <span class="screenshot-label">Pantalla principal</span>
+      </div>
+      <div class="screenshot-wrap">
+        <div class="phone-frame">
+          <img src="img/desvio2.jpg" alt="Desvío Programado — Editar regla" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="placeholder-screen" style="display:none"><span>📝</span><p>Editar regla</p></div>
+        </div>
+        <span class="screenshot-label">Editar regla</span>
+      </div>
+      <div class="screenshot-wrap">
+        <div class="phone-frame">
+          <img src="img/desvio3.jpg" alt="Desvío Programado — Idioma y región" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="placeholder-screen" style="display:none"><span>🌍</span><p>Idioma y región</p></div>
+        </div>
+        <span class="screenshot-label">Idioma y región</span>
+      </div>
+    </div>
+
+    <div class="app-group-title">🧠 MindEase</div>
+    <div class="screenshot-grid">
+      <div class="screenshot-wrap">
+        <div class="phone-frame">
+          <img src="img/mindease1.jpg" alt="MindEase — Mi cuenta / Tokens" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="placeholder-screen" style="display:none"><span>🎯</span><p>Mi cuenta · Tokens</p></div>
+        </div>
+        <span class="screenshot-label">Mi cuenta · Tokens</span>
+      </div>
+      <div class="screenshot-wrap">
+        <div class="phone-frame">
+          <img src="img/mindease2.jpg" alt="MindEase — Plan Vitalicio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="placeholder-screen" style="display:none"><span>✨</span><p>Plan Vitalicio</p></div>
+        </div>
+        <span class="screenshot-label">Plan Vitalicio</span>
+      </div>
+      <div class="screenshot-wrap">
+        <div class="phone-frame">
+          <img src="img/mindease3.jpg" alt="MindEase — Ejercicios" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="placeholder-screen" style="display:none"><span>🧘</span><p>Ejercicios CBT</p></div>
+        </div>
+        <span class="screenshot-label">Ejercicios CBT</span>
+      </div>
+      <div class="screenshot-wrap">
+        <div class="phone-frame">
+          <img src="img/mindease4.jpg" alt="MindEase — Técnicas de relajación" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="placeholder-screen" style="display:none"><span>💆</span><p>Relajación</p></div>
+        </div>
+        <span class="screenshot-label">Relajación</span>
+      </div>
+    </div>
+    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:20px;">💡 Para mostrar las capturas sube las imágenes a la carpeta <code style="background:var(--surface2);padding:2px 6px;border-radius:4px;">portfolio/img/</code> del repositorio con los nombres indicados.</p>
+  </div>
+</div>
+
 <!-- TOOLS / AI DEV -->
 <section id="tools" style="background: var(--surface); padding: 80px 0;">
   <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
@@ -501,7 +657,7 @@
       </div>
     </div>
 
-    <div>
+    <div style="margin-bottom:36px;">
       <h3 style="font-size:0.95rem; color:var(--text-muted); font-weight:600; margin-bottom:16px;">Stack tecnológico</h3>
       <div class="tools-grid">
         <div class="tool-chip">Android Studio</div>
@@ -515,8 +671,32 @@
         <div class="tool-chip">Enfusion SDK</div>
         <div class="tool-chip">EnforceScript</div>
         <div class="tool-chip">progressSQL</div>
+        <div class="tool-chip">MongoDB</div>
         <div class="tool-chip">Google AdMob</div>
         <div class="tool-chip">Play Billing API</div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="font-size:0.95rem; color:var(--text-muted); font-weight:600; margin-bottom:16px;">Evolución del backend · bases de datos</h3>
+      <div style="display:flex; align-items:center; flex-wrap:wrap; gap:0;">
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:14px 18px;">
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">Fase 1</div>
+          <div style="font-weight:600;font-size:0.9rem;">📄 JSON local</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:3px;">Archivos .json por jugador</div>
+        </div>
+        <div style="padding:0 12px;color:var(--text-muted);font-size:1.3rem;">→</div>
+        <div style="background:var(--surface2);border:1px solid rgba(63,185,80,.4);border-radius:8px;padding:14px 18px;">
+          <div style="font-size:0.75rem;color:var(--accent2);margin-bottom:4px;">Fase 2</div>
+          <div style="font-weight:600;font-size:0.9rem;">🍃 MongoDB</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:3px;">Consultas flexibles, NoSQL</div>
+        </div>
+        <div style="padding:0 12px;color:var(--text-muted);font-size:1.3rem;">→</div>
+        <div style="background:var(--surface2);border:1px solid rgba(88,166,255,.4);border-radius:8px;padding:14px 18px;">
+          <div style="font-size:0.75rem;color:var(--accent);margin-bottom:4px;">Fase 3 · Actual</div>
+          <div style="font-weight:600;font-size:0.9rem;">🐘 progressSQL</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:3px;">Persistencia relacional completa</div>
+        </div>
       </div>
     </div>
   </div>
@@ -543,6 +723,33 @@
       <div class="card-icon">🤝</div>
       <h3>IA como copiloto, no sustituto</h3>
       <p>2000+ horas usando IA para desarrollar más rápido y mejor. Sé cuándo confiar en el modelo y cuándo el criterio humano es irremplazable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICADOS -->
+<section id="certificados">
+  <div class="section-label">Formación certificada</div>
+  <h2 class="section-title">Certificados</h2>
+  <p class="section-desc">Certificados de finalización en tecnologías de IA y desarrollo asistido. Sección en expansión.</p>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-logo">🤖</div>
+      <div class="cert-body">
+        <div class="cert-issuer">Anthropic</div>
+        <div class="cert-title">Claude 101</div>
+        <div class="cert-meta">Emitido: 11 de mayo de 2026 · Nº fgc3ws7upbph</div>
+        <span class="cert-badge">✓ Completado</span>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-logo">⌨️</div>
+      <div class="cert-body">
+        <div class="cert-issuer">Anthropic</div>
+        <div class="cert-title">Claude Code 101</div>
+        <div class="cert-meta">Emitido: 11 de mayo de 2026</div>
+        <span class="cert-badge">✓ Completado</span>
+      </div>
     </div>
   </div>
 </section>
