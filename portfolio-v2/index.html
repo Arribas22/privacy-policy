@@ -415,6 +415,43 @@
       color: var(--muted);
     }
 
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid rgba(122, 162, 255, 0.45);
+      background: rgba(122, 162, 255, 0.08);
+      color: #d7e5ff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      transition: 0.2s ease;
+    }
+
+    .project-link:hover {
+      border-color: rgba(78, 205, 196, 0.6);
+      background: rgba(78, 205, 196, 0.12);
+      color: #d8fffb;
+    }
+
+    .project-link.primary {
+      border-color: rgba(78, 205, 196, 0.6);
+      background: rgba(78, 205, 196, 0.12);
+      color: #d8fffb;
+    }
+
+    .systems-evidence {
+      margin-top: 14px;
+    }
+
     .status-live {
       color: #afffd7;
       font-weight: 700;
@@ -876,6 +913,16 @@
         <li data-i18n="sys.19">Sistema de progreso</li>
         <li data-i18n="sys.20">Sistema de administración</li>
       </ul>
+      <div class="systems-evidence">
+        <h4 style="font-size:0.92rem; color:var(--muted); margin:10px 0 10px;" data-i18n="enf.examples.h">Ejemplos reales en repositorio</h4>
+        <div class="tools-grid">
+          <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/blob/main/Scripts/Game/Core/EL_ServerSecurityComponent.c" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.1">Seguridad del servidor</a>
+          <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/blob/main/Scripts/Game/Core/EL_UIRPCComponent.c" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.2">RPC cliente-servidor</a>
+          <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/tree/main/Scripts/Game/Components/InventorySystem" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.3">Inventario</a>
+          <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/tree/main/Scripts/Game/Components/Vehicle" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.4">Vehículos</a>
+          <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/blob/main/Scripts/Game/Admin/EL_BanManager.c" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.5">Administración y bans</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -889,24 +936,40 @@
           <div class="card-icon">🧘</div>
           <h3>MindEase</h3>
           <p data-i18n="pr.c1.p">App Android enfocada en bienestar mental con IA local, ejercicios CBT y diseño orientado a privacidad.</p>
+          <div class="project-links">
+            <a class="project-link primary" href="https://github.com/Arribas22/mindease-android" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.repo">Repositorio</a>
+            <a class="project-link" href="https://github.com/Arribas22/mindease-android/blob/main/DEVELOPER_GUIDE.md" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.readme">README técnico</a>
+          </div>
           <div class="meta"><span class="status-dev" data-i18n="status.dev">En desarrollo</span></div>
         </div>
         <div class="card project-card">
           <div class="card-icon">📞</div>
           <h3>Desvío Programado</h3>
           <p data-i18n="pr.c2.p">Aplicación Android para automatizar reglas de desvío de llamadas según horarios y perfiles configurables.</p>
+          <div class="project-links">
+            <a class="project-link primary" href="https://github.com/Arribas22/desvio-programado-android" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.repo">Repositorio</a>
+            <a class="project-link" href="https://github.com/Arribas22/desvio-programado-android/blob/main/DEVELOPER_GUIDE.md" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.readme">README técnico</a>
+          </div>
           <div class="meta"><span class="status-live" data-i18n="status.live">En producción</span></div>
         </div>
         <div class="card project-card">
           <div class="card-icon">🎮</div>
           <h3>DistritoHispanoRP Framework</h3>
           <p data-i18n="pr.c3.p">Framework completo para servidor RP en Arma Reforger con más de 20 sistemas integrados y backend propio.</p>
+          <div class="project-links">
+            <a class="project-link primary" href="https://github.com/Arribas22/distrito-hispano-rp-showcase" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.repo">Repositorio</a>
+            <a class="project-link" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/blob/main/DEVELOPER_GUIDE.md" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.readme">README técnico</a>
+          </div>
           <div class="meta"><span class="status-live" data-i18n="status.live">En producción</span></div>
         </div>
         <div class="card project-card">
           <div class="card-icon">🎙️</div>
           <h3>Call Recorder</h3>
           <p data-i18n="pr.c4.p">Proyecto Android de grabación con enfoque en calidad de audio, estabilidad de servicio y reglas legales por región.</p>
+          <div class="project-links">
+            <a class="project-link primary" href="https://github.com/Arribas22/call-recorder-android" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.repo">Repositorio</a>
+            <a class="project-link" href="https://github.com/Arribas22/call-recorder-android/blob/main/DEVELOPER_GUIDE.md" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.readme">README técnico</a>
+          </div>
           <div class="meta"><span class="status-dev" data-i18n="status.dev">En desarrollo</span></div>
         </div>
       </div>
@@ -969,21 +1032,21 @@
       <div class="screenshot-grid">
         <div class="screenshot-wrap">
           <div class="phone-frame">
-            <img src="../portfolio/img/desvio1.jpg" alt="Desvío Programado - pantalla principal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <img src="../img/desvio1.jpg" alt="Desvío Programado - pantalla principal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="placeholder-screen"><span>📞</span><p>Main</p></div>
           </div>
           <span class="screenshot-label" data-i18n="sc.d1">Pantalla principal</span>
         </div>
         <div class="screenshot-wrap">
           <div class="phone-frame">
-            <img src="../portfolio/img/desvio2.jpg" alt="Desvío Programado - editar regla" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <img src="../img/desvio2.jpg" alt="Desvío Programado - editar regla" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="placeholder-screen"><span>📝</span><p>Edit</p></div>
           </div>
           <span class="screenshot-label" data-i18n="sc.d2">Editar regla</span>
         </div>
         <div class="screenshot-wrap">
           <div class="phone-frame">
-            <img src="../portfolio/img/desvio3.jpg" alt="Desvío Programado - resumen" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <img src="../img/desvio3.jpg" alt="Desvío Programado - resumen" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="placeholder-screen"><span>✅</span><p>Summary</p></div>
           </div>
           <span class="screenshot-label" data-i18n="sc.d3">Resumen</span>
@@ -994,28 +1057,28 @@
       <div class="screenshot-grid">
         <div class="screenshot-wrap">
           <div class="phone-frame">
-            <img src="../portfolio/img/mindease1.jpg" alt="MindEase - inicio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <img src="../img/mindease1.jpg" alt="MindEase - inicio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="placeholder-screen"><span>🌿</span><p>Home</p></div>
           </div>
           <span class="screenshot-label" data-i18n="sc.m1">Inicio</span>
         </div>
         <div class="screenshot-wrap">
           <div class="phone-frame">
-            <img src="../portfolio/img/mindease2.jpg" alt="MindEase - chat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <img src="../img/mindease2.jpg" alt="MindEase - chat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="placeholder-screen"><span>💬</span><p>Chat</p></div>
           </div>
           <span class="screenshot-label" data-i18n="sc.m2">Chat IA</span>
         </div>
         <div class="screenshot-wrap">
           <div class="phone-frame">
-            <img src="../portfolio/img/mindease3.jpg" alt="MindEase - ejercicios" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <img src="../img/mindease3.jpg" alt="MindEase - ejercicios" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="placeholder-screen"><span>🧘</span><p>CBT</p></div>
           </div>
           <span class="screenshot-label" data-i18n="sc.m3">Ejercicios CBT</span>
         </div>
         <div class="screenshot-wrap">
           <div class="phone-frame">
-            <img src="../portfolio/img/mindease4.jpg" alt="MindEase - relajacion" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <img src="../img/mindease4.jpg" alt="MindEase - relajacion" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="placeholder-screen"><span>💆</span><p>Relax</p></div>
           </div>
           <span class="screenshot-label" data-i18n="sc.m4">Relajación</span>
@@ -1156,7 +1219,7 @@
             <div class="cert-title" data-i18n="cert3.title">Introduction to Claude Cowork</div>
             <div class="cert-meta" data-i18n="cert3.meta">Emitido: 13 de mayo de 2026</div>
             <span class="cert-badge" data-i18n="cert.badge">Completado</span>
-            <a href="../portfolio/certs/claude-cowork.pdf" class="cert-link" target="_blank" rel="noopener noreferrer" data-i18n="cert.link">Ver certificado</a>
+            <a href="../certs/claude-cowork.pdf" class="cert-link" target="_blank" rel="noopener noreferrer" data-i18n="cert.link">Ver certificado</a>
           </div>
         </div>
         <div class="cert-card">
@@ -1166,7 +1229,7 @@
             <div class="cert-title" data-i18n="cert4.title">Claude Code in Action</div>
             <div class="cert-meta" data-i18n="cert4.meta">Emitido: 13 de mayo de 2026 · Nº 524wbaecyt9y</div>
             <span class="cert-badge" data-i18n="cert.badge">Completado</span>
-            <a href="../portfolio/certs/claude-code-in-action.pdf" class="cert-link" target="_blank" rel="noopener noreferrer" data-i18n="cert.link">Ver certificado</a>
+            <a href="../certs/claude-code-in-action.pdf" class="cert-link" target="_blank" rel="noopener noreferrer" data-i18n="cert.link">Ver certificado</a>
           </div>
         </div>
       </div>
@@ -1221,6 +1284,7 @@
         'enf.c2.h':'Backend de sistemas RP','enf.c2.p':'Servicios modulares para facciones, economía, inventarios, vehículos, telefonía y automatizaciones.',
         'enf.c3.h':'Proxy y comunicaciones','enf.c3.p':'Capa intermedia para desacoplar cliente y servicios, mejorar seguridad y control de tráfico.',
         'enf.c4.h':'Evolución de base de datos','enf.c4.p':'Migración progresiva JSON → MongoDB → progressSQL según necesidades de rendimiento y consistencia.',
+        'enf.examples.h':'Ejemplos reales en repositorio','enf.examples.1':'Seguridad del servidor','enf.examples.2':'RPC cliente-servidor','enf.examples.3':'Inventario','enf.examples.4':'Vehículos','enf.examples.5':'Administración y bans',
 
         'sys.1':'Sistema de vehículos','sys.2':'Sistema de facciones','sys.3':'Sistema de inventario','sys.4':'Sistema bancario','sys.5':'Sistema de propiedades',
         'sys.6':'Sistema de telefonía','sys.7':'Sistema de empleos','sys.8':'Sistema de tiendas','sys.9':'Sistema de crafting','sys.10':'Sistema médico',
@@ -1228,6 +1292,7 @@
         'sys.16':'Sistema de economía','sys.17':'Sistema de notificaciones','sys.18':'Sistema de spawn','sys.19':'Sistema de progreso','sys.20':'Sistema de administración',
 
         'pr.label':'Proyectos destacados','pr.title':'Producto, Infraestructura y Sistemas','pr.desc':'Proyectos reales con foco en fiabilidad, escalabilidad y mantenibilidad en producción.',
+        'proj.btn.repo':'Repositorio','proj.btn.readme':'README técnico',
         'pr.c1.p':'App Android enfocada en bienestar mental con IA local, ejercicios CBT y diseño orientado a privacidad.',
         'pr.c2.p':'Aplicación Android para automatizar reglas de desvío de llamadas según horarios y perfiles configurables.',
         'pr.c3.p':'Framework completo para servidor RP en Arma Reforger con más de 20 sistemas integrados y backend propio.',
@@ -1289,6 +1354,7 @@
         'enf.c2.h':'RP systems backend','enf.c2.p':'Modular services for factions, economy, inventory, vehicles, telephony and automation.',
         'enf.c3.h':'Proxy and communications','enf.c3.p':'Middleware layer to decouple clients and services, improve security and traffic control.',
         'enf.c4.h':'Database evolution','enf.c4.p':'Progressive migration JSON → MongoDB → progressSQL based on performance and consistency needs.',
+        'enf.examples.h':'Real repository examples','enf.examples.1':'Server security','enf.examples.2':'Client-server RPC','enf.examples.3':'Inventory','enf.examples.4':'Vehicles','enf.examples.5':'Admin and bans',
 
         'sys.1':'Vehicle system','sys.2':'Faction system','sys.3':'Inventory system','sys.4':'Banking system','sys.5':'Property system',
         'sys.6':'Phone system','sys.7':'Jobs system','sys.8':'Shops system','sys.9':'Crafting system','sys.10':'Medical system',
@@ -1296,6 +1362,7 @@
         'sys.16':'Economy system','sys.17':'Notification system','sys.18':'Spawn system','sys.19':'Progression system','sys.20':'Admin system',
 
         'pr.label':'Featured projects','pr.title':'Product, Infrastructure and Systems','pr.desc':'Real projects focused on reliability, scalability and production maintainability.',
+        'proj.btn.repo':'Repository','proj.btn.readme':'Technical README',
         'pr.c1.p':'Android app focused on mental wellness with on-device AI, CBT exercises and privacy-first design.',
         'pr.c2.p':'Android app to automate call-forwarding rules based on schedule and configurable profiles.',
         'pr.c3.p':'Complete RP server framework for Arma Reforger with 20+ integrated systems and custom backend.',
