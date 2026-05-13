@@ -251,6 +251,19 @@
     .project-card:hover { border-color: var(--accent); box-shadow: 0 4px 24px rgba(79,156,255,.1); transform: translateY(-1px); }
     .project-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
     .project-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .project-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border-bright);
+      border-radius: 7px;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color .15s, border-color .15s, background .15s;
+    }
+    .project-link:hover { color: var(--accent); border-color: var(--accent); background: rgba(79,156,255,.08); text-decoration: none; }
+    .project-link.primary { color: var(--accent); border-color: rgba(79,156,255,.45); }
     .project-status {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.8rem; padding: 4px 12px; border-radius: 20px;
@@ -276,6 +289,8 @@
     }
     .system-item span:first-child { font-size: 1.2rem; }
     .system-item span:last-child { font-size: 0.85rem; color: var(--text-muted); }
+    .systems-evidence { margin-top: 18px; }
+    .systems-evidence .tools-grid a { text-decoration: none; }
 
     /* TOOLS */
     .tools-grid {
@@ -634,6 +649,16 @@
       <div class="system-item"><span>🔑</span><span>Sistema de llaves de vehículos</span></div>
       <div class="system-item"><span>📊</span><span>Admin panel y estadísticas</span></div>
     </div>
+    <div class="systems-evidence">
+      <h4 style="font-size:0.92rem; font-weight:600; margin:16px 0 10px; color:var(--text-muted);" data-i18n="enf.examples.h">Ejemplos reales en repositorio</h4>
+      <div class="tools-grid">
+        <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/blob/main/Scripts/Game/Core/EL_ServerSecurityComponent.c" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.1">Seguridad del servidor</a>
+        <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/blob/main/Scripts/Game/Core/EL_UIRPCComponent.c" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.2">RPC cliente-servidor</a>
+        <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/tree/main/Scripts/Game/Components/InventorySystem" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.3">Inventario</a>
+        <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/tree/main/Scripts/Game/Components/Vehicle" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.4">Vehículos</a>
+        <a class="tool-chip" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/blob/main/Scripts/Game/Admin/EL_BanManager.c" target="_blank" rel="noopener noreferrer" data-i18n="enf.examples.5">Administración y bans</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -659,6 +684,10 @@
         <span class="tag">Play Billing</span>
         <span class="tag">WorkManager</span>
       </div>
+      <div class="project-links">
+        <a class="project-link primary" href="https://github.com/Arribas22/mindease-android" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.repo">Repositorio</a>
+        <a class="project-link" href="https://github.com/Arribas22/mindease-android/blob/main/DEVELOPER_GUIDE.md" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.readme">README técnico</a>
+      </div>
     </div>
     <span class="project-status status-dev"><span class="dot"></span><span data-i18n="p1.status">En desarrollo</span></span>
   </div>
@@ -674,6 +703,10 @@
         <span class="tag">Jetpack Compose</span>
         <span class="tag">Android Telephony</span>
         <span class="tag">WorkManager</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link primary" href="https://github.com/Arribas22/desvio-programado-android" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.repo">Repositorio</a>
+        <a class="project-link" href="https://github.com/Arribas22/desvio-programado-android/blob/main/DEVELOPER_GUIDE.md" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.readme">README técnico</a>
       </div>
     </div>
     <span class="project-status status-live"><span class="dot"></span><span data-i18n="p2.status">Publicada</span></span>
@@ -693,6 +726,10 @@
         <span class="tag">OOP</span>
         <span class="tag">Server-Client RPC</span>
       </div>
+      <div class="project-links">
+        <a class="project-link primary" href="https://github.com/Arribas22/distrito-hispano-rp-showcase" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.repo">Repositorio</a>
+        <a class="project-link" href="https://github.com/Arribas22/distrito-hispano-rp-showcase/blob/main/DEVELOPER_GUIDE.md" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.readme">README técnico</a>
+      </div>
     </div>
     <span class="project-status status-live"><span class="dot"></span><span data-i18n="p3.status">En producción</span></span>
   </div>
@@ -708,6 +745,10 @@
         <span class="tag">MVVM</span>
         <span class="tag">Room</span>
         <span class="tag">Android Audio</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link primary" href="https://github.com/Arribas22/call-recorder-android" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.repo">Repositorio</a>
+        <a class="project-link" href="https://github.com/Arribas22/call-recorder-android/blob/main/DEVELOPER_GUIDE.md" target="_blank" rel="noopener noreferrer" data-i18n="proj.btn.readme">README técnico</a>
       </div>
     </div>
     <span class="project-status status-dev"><span class="dot"></span><span data-i18n="p4.status">En desarrollo</span></span>
@@ -1062,7 +1103,9 @@ const T = {
     'enf.c3.h':'Proxy de Conexión Personalizado','enf.c3.p':'Proxy propio para la comunicación entre el servidor de juego y la base de datos externa. Manejo de reintentos, carga asíncrona y callbacks que garantizan integridad de datos.',
     'enf.c4.h':'Evolución del Backend de Datos','enf.c4.p':'El sistema empezó con <strong>archivos .json locales</strong>, escaló a <strong>MongoDB</strong> para consultas flexibles y finalmente migró a <strong>progressSQL</strong> para máximo rendimiento y persistencia relacional.',
     'enf.sys':'Sistemas implementados en DistritoHispanoRP',
+    'enf.examples.h':'Ejemplos reales en repositorio','enf.examples.1':'Seguridad del servidor','enf.examples.2':'RPC cliente-servidor','enf.examples.3':'Inventario','enf.examples.4':'Vehículos','enf.examples.5':'Administración y bans',
     'proj.label':'Portfolio','proj.title':'Proyectos Destacados','proj.desc':'Aplicaciones publicadas y sistemas en activo.',
+    'proj.btn.repo':'Repositorio','proj.btn.readme':'README técnico',
     'p1.title':'🧠 MindEase — Bienestar Mental con IA Local',
     'p1.desc':'App Android de salud mental que incorpora Gemma 3 1B completamente offline. Check-in diario de estado emocional, chat terapéutico con IA, diario personal, ejercicios de bienestar guiados y análisis de tendencias. Todo sin enviar datos al exterior.',
     'p1.status':'En desarrollo',
@@ -1131,7 +1174,9 @@ const T = {
     'enf.c3.h':'Custom Connection Proxy','enf.c3.p':'Custom proxy for communication between the game server and the external database. Retry handling, async loading and callbacks that guarantee data integrity.',
     'enf.c4.h':'Data Backend Evolution','enf.c4.p':'The system started with <strong>local .json files</strong>, scaled to <strong>MongoDB</strong> for flexible queries and finally migrated to <strong>progressSQL</strong> for maximum performance and relational persistence.',
     'enf.sys':'Systems implemented in DistritoHispanoRP',
+    'enf.examples.h':'Real repository examples','enf.examples.1':'Server security','enf.examples.2':'Client-server RPC','enf.examples.3':'Inventory','enf.examples.4':'Vehicles','enf.examples.5':'Admin and bans',
     'proj.label':'Portfolio','proj.title':'Featured Projects','proj.desc':'Published applications and active systems.',
+    'proj.btn.repo':'Repository','proj.btn.readme':'Technical README',
     'p1.title':'🧠 MindEase — Mental Wellness with Local AI',
     'p1.desc':'Android mental health app incorporating Gemma 3 1B completely offline. Daily emotional check-in, therapeutic AI chat, personal diary, guided wellness exercises and trend analysis. All without sending data outside.',
     'p1.status':'In development',
