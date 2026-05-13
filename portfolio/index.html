@@ -763,6 +763,26 @@
           <span class="tag">AI-powered learning</span>
         </div>
       </div>
+      <div class="card">
+        <div class="card-icon">🗄️</div>
+        <h3 data-i18n="infra.c5.h">Exploración de Bases de Datos</h3>
+        <p data-i18n="infra.c5.p">Uso habitual de MySQL Workbench y HeidiSQL para inspección visual de esquemas, ejecución de consultas, análisis de datos y gestión directa de bases de datos relacionales en entornos de desarrollo y producción.</p>
+        <div style="margin-top:12px">
+          <span class="tag">MySQL Workbench</span>
+          <span class="tag">HeidiSQL</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3 data-i18n="infra.c6.h">Depuración &amp; Análisis de Errores</h3>
+        <p data-i18n="infra.c6.p">Todos mis proyectos pasan un ciclo de depuración estricto: análisis de logs, reproducción sistemática de errores y correcciones verificadas. Resultados estables y escalables en producción real.</p>
+        <div style="margin-top:12px">
+          <span class="tag">Debugging</span>
+          <span class="tag">Log analysis</span>
+          <span class="tag">Stable builds</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -920,12 +940,12 @@
     <div class="card">
       <div class="card-icon">🛡️</div>
       <h3 data-i18n="phi1.h">Privacidad sin compromiso</h3>
-      <p data-i18n="phi1.p">Si un modelo puede correr en el dispositivo, corre en el dispositivo. Recopilo solo los datos estrictamente necesarios para que la app funcione.</p>
+      <p data-i18n="phi1.p">Privacidad por diseño en cada capa del sistema: modelos de IA que corren en local, mínima recolección de datos y arquitecturas donde los usuarios siempre controlan su información.</p>
     </div>
     <div class="card">
       <div class="card-icon">⚡</div>
       <h3 data-i18n="phi2.h">Sistemas que escalan</h3>
-      <p data-i18n="phi2.p">Diseño arquitecturas que soportan crecimiento: desde un componente de persistencia hasta un framework con 20+ sistemas interconectados en tiempo real.</p>
+      <p data-i18n="phi2.p">Diseño arquitecturas que soportan crecimiento: desde apps Android con IA local hasta frameworks de servidor con 20+ sistemas interconectados gestionando cientos de usuarios en tiempo real.</p>
     </div>
     <div class="card">
       <div class="card-icon">🤝</div>
@@ -1055,8 +1075,8 @@ const T = {
     'tools.mcp.desc':'Configuración e integración de servidores MCP personalizados en agentes de IA locales. Permiten extender las capacidades del agente con herramientas propias, memoria persistente y contexto especializado por proyecto.',
     'db.f1':'Fase 1','db.f1l':'Archivos .json por jugador','db.f2':'Fase 2','db.f2l':'Consultas flexibles, NoSQL','db.f3':'Fase 3 · Actual','db.f3l':'Persistencia relacional completa',
     'phi.label':'Filosofía','phi.title':'Cómo trabajo','phi.desc':'Principios que guían cada proyecto.',
-    'phi1.h':'Privacidad sin compromiso','phi1.p':'Si un modelo puede correr en el dispositivo, corre en el dispositivo. Recopilo solo los datos estrictamente necesarios para que la app funcione.',
-    'phi2.h':'Sistemas que escalan','phi2.p':'Diseño arquitecturas que soportan crecimiento: desde un componente de persistencia hasta un framework con 20+ sistemas interconectados en tiempo real.',
+    'phi1.h':'Privacidad sin compromiso','phi1.p':'Privacidad por diseño en cada capa del sistema: modelos de IA que corren en local, mínima recolección de datos y arquitecturas donde los usuarios siempre controlan su información.',
+    'phi2.h':'Sistemas que escalan','phi2.p':'Diseño arquitecturas que soportan crecimiento: desde apps Android con IA local hasta frameworks de servidor con 20+ sistemas interconectados gestionando cientos de usuarios en tiempo real.',
     'phi3.h':'IA como copiloto, no sustituto','phi3.p':'2000+ horas usando IA para desarrollar más rápido y mejor. Sé cuándo confiar en el modelo y cuándo el criterio humano es irremplazable.',
     'certs.label':'Formación certificada','certs.title':'Certificados','certs.desc':'Certificados de finalización en tecnologías de IA y desarrollo asistido. Sección en expansión.',
     'cert1.meta':'Emitido: 11 de mayo de 2026 · Nº fgc3ws7upbph','cert2.meta':'Emitido: 11 de mayo de 2026',
@@ -1069,6 +1089,8 @@ const T = {
     'infra.c2.h':'Firewall &amp; Seguridad de Red','infra.c2.p':'Configuración de reglas de firewall, auditoría de puertos abiertos, análisis de tráfico de red y detección de vulnerabilidades. Endurecimiento del servidor para entornos de juego en producción con tráfico real de jugadores.',
     'infra.c3.h':'XAMPP &amp; Servicios Web','infra.c3.p':'Despliegue de servidores Apache y MySQL con XAMPP: configuración de virtual hosts, gestión de bases de datos SQL, acceso remoto seguro y mantenimiento de servicios web auxiliares.',
     'infra.c4.h':'Aprendizaje en Cualquier Entorno','infra.c4.p':'Capacidad demostrada para operar y desarrollar en cualquier sistema, lenguaje o plataforma. Con IA como copiloto y criterio propio como director, puedo incorporar cualquier tecnología nueva y llevarla a resultados reales en tiempo mínimo.',
+    'infra.c5.h':'Exploración de Bases de Datos','infra.c5.p':'Uso habitual de MySQL Workbench y HeidiSQL para inspección visual de esquemas, ejecución de consultas, análisis de datos y gestión directa de bases de datos relacionales en entornos de desarrollo y producción.',
+    'infra.c6.h':'Depuración &amp; Análisis de Errores','infra.c6.p':'Todos mis proyectos pasan un ciclo de depuración estricto: análisis de logs, reproducción sistemática de errores y correcciones verificadas. Resultados estables y escalables en producción real.',
     'contact.title':'¿Hablamos?','contact.desc':'Abierto a proyectos de desarrollo Android, integraciones de IA, sistemas de juego y consultoría técnica.',
     'footer.made':'Desarrollado con GitHub Copilot &amp; Claude',
   },
@@ -1120,8 +1142,8 @@ const T = {
     'tools.mcp.desc':'Configuration and integration of custom MCP servers in local AI agents. They extend the agent\'s capabilities with custom tools, persistent memory and project-specific context.',
     'db.f1':'Phase 1','db.f1l':'Local .json files per player','db.f2':'Phase 2','db.f2l':'Flexible queries, NoSQL','db.f3':'Phase 3 · Current','db.f3l':'Complete relational persistence',
     'phi.label':'Philosophy','phi.title':'How I work','phi.desc':'Principles that guide every project.',
-    'phi1.h':'Privacy without compromise','phi1.p':'If a model can run on the device, it runs on the device. I only collect the data strictly necessary for the app to function.',
-    'phi2.h':'Systems that scale','phi2.p':'I design architectures that support growth: from a persistence component to a framework with 20+ interconnected real-time systems.',
+    'phi1.h':'Privacy without compromise','phi1.p':'Privacy by design at every layer: on-device AI models, minimal data collection, and architectures where users always control their information.',
+    'phi2.h':'Systems that scale','phi2.p':'I design architectures built for growth: from Android apps with on-device AI to server frameworks with 20+ interconnected systems managing hundreds of concurrent users in real time.',
     'phi3.h':'AI as copilot, not substitute','phi3.p':'2000+ hours using AI to develop faster and better. I know when to trust the model and when human judgment is irreplaceable.',
     'certs.label':'Certified training','certs.title':'Certificates','certs.desc':'Completion certificates in AI technologies and assisted development. Section expanding.',
     'cert1.meta':'Issued: May 11, 2026 · No. fgc3ws7upbph','cert2.meta':'Issued: May 11, 2026',
@@ -1134,6 +1156,8 @@ const T = {
     'infra.c2.h':'Firewall &amp; Network Security','infra.c2.p':'Firewall rule configuration, open port auditing, network traffic analysis and vulnerability detection. Server hardening for production game environments with real player traffic.',
     'infra.c3.h':'XAMPP &amp; Web Services','infra.c3.p':'Deployment of Apache and MySQL servers with XAMPP: virtual host configuration, SQL database management, secure remote access and auxiliary web service maintenance.',
     'infra.c4.h':'Learning in Any Environment','infra.c4.p':'Demonstrated ability to operate and develop in any system, language or platform. With AI as copilot and own judgment as director, I can incorporate any new technology and deliver real results in minimum time.',
+    'infra.c5.h':'Database Exploration','infra.c5.p':'Regular use of MySQL Workbench and HeidiSQL for visual schema inspection, query execution, data analysis and direct management of relational databases in both development and production environments.',
+    'infra.c6.h':'Debugging &amp; Error Analysis','infra.c6.p':'All my projects go through a strict debugging cycle: log analysis, systematic error reproduction and verified fixes. Stable and scalable results in real production.',
     'contact.title':'Shall we talk?','contact.desc':'Open to Android development projects, AI integrations, game systems and technical consulting.',
     'footer.made':'Built with GitHub Copilot &amp; Claude',
   }
