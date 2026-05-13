@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alvaro Arribas | DevOps & AI Systems Engineer</title>
+  <meta name="description" content="Portfolio profesional de Alvaro Arribas: DevOps, Android, sistemas de servidores de juego, IA aplicada y arquitectura escalable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070d17;
+      --bg-soft: #0d1626;
+      --surface: #111d31;
+      --surface-2: #15233b;
+      --surface-3: #1a2a45;
+      --text: #eaf0fb;
+      --muted: #9db0cf;
+      --line: #263c63;
+      --accent: #4ecdc4;
+      --accent-2: #7aa2ff;
+      --accent-3: #ffc857;
+      --ok: #36d399;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(122, 162, 255, 0.22), transparent 60%),
+        radial-gradient(800px 500px at 90% -20%, rgba(78, 205, 196, 0.18), transparent 55%),
+        linear-gradient(180deg, #060b14 0%, var(--bg) 35%, #050912 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 16px;
+      z-index: 50;
+      margin-top: 16px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border: 1px solid rgba(122, 162, 255, 0.3);
+      border-radius: 999px;
+      background: rgba(9, 16, 29, 0.72);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--ok);
+      box-shadow: 0 0 18px rgba(54, 211, 153, 0.9);
+      animation: pulse 2.4s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.55; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      font-size: 0.83rem;
+      color: var(--muted);
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      border-color: rgba(122, 162, 255, 0.45);
+      background: rgba(122, 162, 255, 0.13);
+    }
+
+    .lang-toggle {
+      border: 1px solid rgba(78, 205, 196, 0.45);
+      background: rgba(78, 205, 196, 0.12);
+      color: #dffdfa;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    header {
+      padding: 64px 0 44px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-main,
+    .hero-side {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, rgba(17, 29, 49, 0.94), rgba(11, 19, 33, 0.9));
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 34px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(122, 162, 255, 0.45);
+      background: rgba(122, 162, 255, 0.12);
+      color: #dce7ff;
+      font-size: 0.8rem;
+      padding: 7px 12px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    .accent {
+      background: linear-gradient(90deg, var(--accent), #7aa2ff 45%, #9f7aea 85%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-lead {
+      color: var(--muted);
+      font-size: 1.03rem;
+      max-width: 66ch;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      border-radius: 11px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 11px 15px;
+      transition: 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      color: #06211f;
+      background: linear-gradient(120deg, var(--accent), #77efe6);
+      box-shadow: 0 10px 30px rgba(78, 205, 196, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      border-color: rgba(122, 162, 255, 0.5);
+      color: #dfebff;
+      background: rgba(122, 162, 255, 0.08);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(122, 162, 255, 0.85);
+      background: rgba(122, 162, 255, 0.16);
+    }
+
+    .hero-side {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .metric {
+      border: 1px solid rgba(122, 162, 255, 0.27);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: rgba(14, 24, 40, 0.75);
+    }
+
+    .metric strong {
+      font-size: 1.15rem;
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      color: #d7f3ff;
+    }
+
+    .metric span {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .stats {
+      padding: 0 0 26px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(12, 21, 37, 0.9);
+      padding: 14px;
+      text-align: center;
+    }
+
+    .stat .value {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.25rem;
+      color: #d9f4ff;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .stat .label {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    section {
+      padding: 62px 0;
+    }
+
+    .section-shell {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, rgba(15, 25, 43, 0.94), rgba(10, 16, 29, 0.9));
+      padding: 28px;
+    }
+
+    .section-label {
+      color: #86b7ff;
+      text-transform: uppercase;
+      font-size: 0.73rem;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+      line-height: 1.2;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      max-width: 74ch;
+      margin-bottom: 24px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: linear-gradient(160deg, rgba(17, 30, 51, 0.95), rgba(13, 22, 37, 0.93));
+      padding: 18px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: auto -50% -50% auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(122, 162, 255, 0.2), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(122, 162, 255, 0.58);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon {
+      font-size: 1.22rem;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 1.03rem;
+      margin-bottom: 9px;
+      line-height: 1.28;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .tag {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid rgba(122, 162, 255, 0.35);
+      background: rgba(122, 162, 255, 0.1);
+      font-size: 0.72rem;
+      color: #cfe0ff;
+      padding: 3px 8px;
+      margin: 8px 6px 0 0;
+      font-weight: 600;
+    }
+
+    .systems-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin-top: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .systems-list li {
+      border: 1px solid rgba(78, 205, 196, 0.3);
+      border-radius: 10px;
+      background: rgba(78, 205, 196, 0.1);
+      color: #c9fff9;
+      padding: 8px 10px;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .project-card .meta {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .status-live {
+      color: #afffd7;
+      font-weight: 700;
+    }
+
+    .status-dev {
+      color: #ffe5a7;
+      font-weight: 700;
+    }
+
+    .screenshot-group-title {
+      margin: 14px 0 14px;
+      color: #d6e4ff;
+      font-weight: 700;
+      font-size: 0.97rem;
+    }
+
+    .screenshot-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .screenshot-wrap {
+      width: 162px;
+      text-align: center;
+    }
+
+    .phone-frame {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid rgba(122, 162, 255, 0.45);
+      background: linear-gradient(160deg, rgba(19, 33, 57, 0.95), rgba(14, 24, 42, 0.9));
+      padding: 8px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+      transition: transform 0.2s ease;
+      aspect-ratio: 9 / 19;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .phone-frame:hover {
+      transform: translateY(-3px);
+    }
+
+    .phone-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .placeholder-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #1a2b48, #13233b);
+      color: #cde2ff;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    .screenshot-label {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tool-chip {
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      padding: 7px 10px;
+      font-size: 0.8rem;
+      color: #d7e5ff;
+      background: rgba(22, 36, 59, 0.82);
+      font-weight: 600;
+    }
+
+    .tool-primary {
+      border-color: rgba(78, 205, 196, 0.5);
+      background: rgba(78, 205, 196, 0.14);
+      color: #cffffb;
+    }
+
+    .db-timeline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 10px;
+    }
+
+    .db-step {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(15, 26, 45, 0.92);
+      padding: 12px;
+      min-width: 220px;
+      flex: 1;
+    }
+
+    .db-step .phase {
+      font-size: 0.73rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+
+    .db-step .title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .db-step .line {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .cert-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: linear-gradient(145deg, rgba(16, 27, 45, 0.96), rgba(12, 20, 35, 0.92));
+      padding: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .cert-logo {
+      font-size: 1.4rem;
+      line-height: 1;
+      margin-top: 3px;
+    }
+
+    .cert-issuer {
+      font-size: 0.76rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .cert-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .cert-meta {
+      color: var(--muted);
+      font-size: 0.84rem;
+      margin-bottom: 9px;
+    }
+
+    .cert-badge {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid rgba(54, 211, 153, 0.45);
+      background: rgba(54, 211, 153, 0.14);
+      color: #cbffea;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 9px;
+      margin-right: 8px;
+    }
+
+    .cert-link {
+      display: inline-block;
+      border-radius: 8px;
+      border: 1px solid rgba(122, 162, 255, 0.45);
+      background: rgba(122, 162, 255, 0.1);
+      color: #d8e7ff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 8px;
+      margin-top: 8px;
+    }
+
+    .contact {
+      text-align: center;
+      border: 1px solid rgba(78, 205, 196, 0.45);
+      background: linear-gradient(145deg, rgba(13, 25, 41, 0.95), rgba(9, 16, 30, 0.92));
+      border-radius: var(--radius-lg);
+      padding: 36px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      margin-bottom: 8px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      max-width: 70ch;
+      margin: 0 auto 16px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid rgba(78, 205, 196, 0.45);
+      background: rgba(78, 205, 196, 0.12);
+      color: #d8fffb;
+      padding: 8px 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    footer {
+      padding: 26px 0 36px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    @media (max-width: 1100px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: calc(100% - 24px);
+      }
+
+      .nav-wrap {
+        position: static;
+      }
+
+      nav {
+        border-radius: 18px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .brand {
+        justify-content: space-between;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      header {
+        padding-top: 24px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .section-shell {
+        padding: 20px;
+      }
+
+      .stats-grid,
+      .cards-grid,
+      .systems-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container nav-wrap">
+    <nav>
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>ALVARO ARRIBAS</span>
+      </div>
+      <div class="nav-links">
+        <a href="#android" data-i18n="nav.android">Android</a>
+        <a href="#enfusion" data-i18n="nav.enfusion">Enfusion</a>
+        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="#infra" data-i18n="nav.infra">Infraestructura</a>
+        <a href="#capturas" data-i18n="nav.screenshots">Capturas</a>
+        <a href="#tools" data-i18n="nav.tools">Herramientas</a>
+        <a href="#certificados" data-i18n="nav.certs">Certificados</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </div>
+      <button class="lang-toggle" id="lang-btn" onclick="toggleLang()">EN</button>
+    </nav>
+  </div>
+
+  <header>
+    <div class="container hero">
+      <div class="hero-main">
+        <div class="hero-kicker" data-i18n="hero.kicker">DevOps · Android · Sistemas de IA</div>
+        <h1 data-i18n="hero.title">Arquitectura, Operaciones y <span class="accent">Software de Alto Rendimiento</span></h1>
+        <p class="hero-lead" data-i18n="hero.desc">Ingeniero orientado a resultados reales en producción: desarrollo Android, infraestructura de servidores, automatización de flujos con IA y sistemas escalables para entornos de alta demanda.</p>
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn btn-primary" data-i18n="hero.cta1">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-secondary" data-i18n="hero.cta2">Contactar</a>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <div class="metric">
+          <strong data-i18n="hero.m1v">+2000 h</strong>
+          <span data-i18n="hero.m1l">Desarrollo asistido con IA en VS Code</span>
+        </div>
+        <div class="metric">
+          <strong data-i18n="hero.m2v">+10000 h</strong>
+          <span data-i18n="hero.m2l">Desarrollo de servidores de juegos multiplataforma</span>
+        </div>
+        <div class="metric">
+          <strong data-i18n="hero.m3v">20+ sistemas</strong>
+          <span data-i18n="hero.m3l">Módulos RP interconectados en tiempo real</span>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div class="container stats">
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="value" data-i18n="stats.s1v">+2000 h</span>
+        <span class="label" data-i18n="stats.s1l">VS Code + Copilot</span>
+      </div>
+      <div class="stat">
+        <span class="value" data-i18n="stats.s2v">+10000 h</span>
+        <span class="label" data-i18n="stats.s2l">Servidores de juego</span>
+      </div>
+      <div class="stat">
+        <span class="value" data-i18n="stats.s3v">100%</span>
+        <span class="label" data-i18n="stats.s3l">Kotlin en Android nativo</span>
+      </div>
+      <div class="stat">
+        <span class="value" data-i18n="stats.s4v">20+</span>
+        <span class="label" data-i18n="stats.s4l">Sistemas RP desplegados</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="android">
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="and.label">Android Engineering</div>
+      <h2 class="section-title" data-i18n="and.title">Aplicaciones Android Profesionales</h2>
+      <p class="section-desc" data-i18n="and.desc">Arquitectura robusta, UX cuidada y enfoque en privacidad, rendimiento y mantenibilidad a largo plazo.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3 data-i18n="and.c1.h">IA local y privacidad</h3>
+          <p data-i18n="and.c1.p">Integración de modelos en dispositivo para respuestas rápidas y control de datos sin dependencia constante de la nube.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏗️</div>
+          <h3 data-i18n="and.c2.h">Arquitectura moderna</h3>
+          <p data-i18n="and.c2.p">Clean Architecture, ViewModel, Room, estados predecibles y separación estricta de responsabilidades.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💳</div>
+          <h3 data-i18n="and.c3.h">Monetización integrada</h3>
+          <p data-i18n="and.c3.p">Google Play Billing y AdMob configurados con eventos medibles, pruebas y control de experiencia de usuario.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔐</div>
+          <h3 data-i18n="and.c4.h">Privacidad por defecto</h3>
+          <p data-i18n="and.c4.p">Diseño de apps con mínimo acceso a datos, consentimiento claro y políticas transparentes.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <h3 data-i18n="and.c5.h">Publicación en Google Play</h3>
+          <p data-i18n="and.c5.p">Pipeline completo desde build firmada hasta despliegue y mantenimiento de versiones.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎨</div>
+          <h3 data-i18n="and.c6.h">Material 3 y UX real</h3>
+          <p data-i18n="and.c6.p">Interfaces limpias y coherentes, enfocadas en legibilidad, velocidad de uso y adopción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="enfusion">
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="enf.label">Enfusion Full Stack</div>
+      <h2 class="section-title" data-i18n="enf.title">Framework RP Escalable para Arma Reforger</h2>
+      <p class="section-desc" data-i18n="enf.desc">Construcción de ecosistema técnico completo: frontend, backend, proxy y evolución de persistencia para servidores de juego en producción.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">🧩</div>
+          <h3 data-i18n="enf.c1.h">Frontend en Enfusion</h3>
+          <p data-i18n="enf.c1.p">UI, lógica de cliente y sistemas de interacción real-time para experiencia fluida in-game.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3 data-i18n="enf.c2.h">Backend de sistemas RP</h3>
+          <p data-i18n="enf.c2.p">Servicios modulares para facciones, economía, inventarios, vehículos, telefonía y automatizaciones.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌍</div>
+          <h3 data-i18n="enf.c3.h">Proxy y comunicaciones</h3>
+          <p data-i18n="enf.c3.p">Capa intermedia para desacoplar cliente y servicios, mejorar seguridad y control de tráfico.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🗃️</div>
+          <h3 data-i18n="enf.c4.h">Evolución de base de datos</h3>
+          <p data-i18n="enf.c4.p">Migración progresiva JSON → MongoDB → progressSQL según necesidades de rendimiento y consistencia.</p>
+        </div>
+      </div>
+
+      <ul class="systems-list">
+        <li data-i18n="sys.1">Sistema de vehículos</li>
+        <li data-i18n="sys.2">Sistema de facciones</li>
+        <li data-i18n="sys.3">Sistema de inventario</li>
+        <li data-i18n="sys.4">Sistema bancario</li>
+        <li data-i18n="sys.5">Sistema de propiedades</li>
+        <li data-i18n="sys.6">Sistema de telefonía</li>
+        <li data-i18n="sys.7">Sistema de empleos</li>
+        <li data-i18n="sys.8">Sistema de tiendas</li>
+        <li data-i18n="sys.9">Sistema de crafting</li>
+        <li data-i18n="sys.10">Sistema médico</li>
+        <li data-i18n="sys.11">Sistema policial</li>
+        <li data-i18n="sys.12">Sistema legal</li>
+        <li data-i18n="sys.13">Sistema de permisos</li>
+        <li data-i18n="sys.14">Sistema de logs</li>
+        <li data-i18n="sys.15">Sistema anti-cheat</li>
+        <li data-i18n="sys.16">Sistema de economía</li>
+        <li data-i18n="sys.17">Sistema de notificaciones</li>
+        <li data-i18n="sys.18">Sistema de spawn</li>
+        <li data-i18n="sys.19">Sistema de progreso</li>
+        <li data-i18n="sys.20">Sistema de administración</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="pr.label">Proyectos destacados</div>
+      <h2 class="section-title" data-i18n="pr.title">Producto, Infraestructura y Sistemas</h2>
+      <p class="section-desc" data-i18n="pr.desc">Proyectos reales con foco en fiabilidad, escalabilidad y mantenibilidad en producción.</p>
+      <div class="cards-grid">
+        <div class="card project-card">
+          <div class="card-icon">🧘</div>
+          <h3>MindEase</h3>
+          <p data-i18n="pr.c1.p">App Android enfocada en bienestar mental con IA local, ejercicios CBT y diseño orientado a privacidad.</p>
+          <div class="meta"><span class="status-dev" data-i18n="status.dev">En desarrollo</span></div>
+        </div>
+        <div class="card project-card">
+          <div class="card-icon">📞</div>
+          <h3>Desvío Programado</h3>
+          <p data-i18n="pr.c2.p">Aplicación Android para automatizar reglas de desvío de llamadas según horarios y perfiles configurables.</p>
+          <div class="meta"><span class="status-live" data-i18n="status.live">En producción</span></div>
+        </div>
+        <div class="card project-card">
+          <div class="card-icon">🎮</div>
+          <h3>DistritoHispanoRP Framework</h3>
+          <p data-i18n="pr.c3.p">Framework completo para servidor RP en Arma Reforger con más de 20 sistemas integrados y backend propio.</p>
+          <div class="meta"><span class="status-live" data-i18n="status.live">En producción</span></div>
+        </div>
+        <div class="card project-card">
+          <div class="card-icon">🎙️</div>
+          <h3>Call Recorder</h3>
+          <p data-i18n="pr.c4.p">Proyecto Android de grabación con enfoque en calidad de audio, estabilidad de servicio y reglas legales por región.</p>
+          <div class="meta"><span class="status-dev" data-i18n="status.dev">En desarrollo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="infra">
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="infra.label">Infraestructura &amp; DevOps</div>
+      <h2 class="section-title" data-i18n="infra.title">Administración de Servidores &amp; Sistemas</h2>
+      <p class="section-desc" data-i18n="infra.desc">Gestión operativa en producción: servidores, red, seguridad, bases de datos y procesos de depuración para estabilidad real.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">🖥️</div>
+          <h3 data-i18n="infra.c1.h">VPS &amp; Windows Server</h3>
+          <p data-i18n="infra.c1.p">Administración de VPS en Windows Server: roles, usuarios, RDP, actualizaciones y mantenimiento continuo.</p>
+          <span class="tag">Windows Server</span><span class="tag">VPS</span><span class="tag">RDP</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔥</div>
+          <h3 data-i18n="infra.c2.h">Firewall &amp; Seguridad de Red</h3>
+          <p data-i18n="infra.c2.p">Reglas de firewall, auditoría de puertos, análisis de tráfico y hardening para entornos con usuarios reales.</p>
+          <span class="tag">Firewall</span><span class="tag">Port auditing</span><span class="tag">Hardening</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3 data-i18n="infra.c3.h">XAMPP &amp; Servicios Web</h3>
+          <p data-i18n="infra.c3.p">Despliegue y mantenimiento de Apache y MySQL con virtual hosts, acceso remoto seguro y operación estable.</p>
+          <span class="tag">Apache</span><span class="tag">MySQL</span><span class="tag">XAMPP</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3 data-i18n="infra.c4.h">Aprendizaje en Cualquier Entorno</h3>
+          <p data-i18n="infra.c4.p">Adaptación rápida a nuevas tecnologías, herramientas y stacks para llevar ideas a producción en tiempo mínimo.</p>
+          <span class="tag">Adaptabilidad</span><span class="tag">Multi-stack</span><span class="tag">AI-powered learning</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">🗄️</div>
+          <h3 data-i18n="infra.c5.h">Exploración de Bases de Datos</h3>
+          <p data-i18n="infra.c5.p">Experiencia en MySQL Workbench y HeidiSQL para análisis de esquemas, consultas y mantenimiento de datos.</p>
+          <span class="tag">MySQL Workbench</span><span class="tag">HeidiSQL</span><span class="tag">SQL</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔍</div>
+          <h3 data-i18n="infra.c6.h">Depuración &amp; Análisis de Errores</h3>
+          <p data-i18n="infra.c6.p">Ciclo estricto de debugging en todos los proyectos: análisis de logs, reproducción de errores y fixes verificadas.</p>
+          <span class="tag">Debugging</span><span class="tag">Log analysis</span><span class="tag">Stable builds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capturas">
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="sc.label">Apps en acción</div>
+      <h2 class="section-title" data-i18n="sc.title">Capturas de pantalla</h2>
+      <p class="section-desc" data-i18n="sc.desc">Pantallas reales de las aplicaciones en dispositivos físicos.</p>
+
+      <div class="screenshot-group-title" data-i18n="sc.g1">Desvío Programado</div>
+      <div class="screenshot-grid">
+        <div class="screenshot-wrap">
+          <div class="phone-frame">
+            <img src="../portfolio/img/desvio1.jpg" alt="Desvío Programado - pantalla principal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder-screen"><span>📞</span><p>Main</p></div>
+          </div>
+          <span class="screenshot-label" data-i18n="sc.d1">Pantalla principal</span>
+        </div>
+        <div class="screenshot-wrap">
+          <div class="phone-frame">
+            <img src="../portfolio/img/desvio2.jpg" alt="Desvío Programado - editar regla" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder-screen"><span>📝</span><p>Edit</p></div>
+          </div>
+          <span class="screenshot-label" data-i18n="sc.d2">Editar regla</span>
+        </div>
+        <div class="screenshot-wrap">
+          <div class="phone-frame">
+            <img src="../portfolio/img/desvio3.jpg" alt="Desvío Programado - resumen" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder-screen"><span>✅</span><p>Summary</p></div>
+          </div>
+          <span class="screenshot-label" data-i18n="sc.d3">Resumen</span>
+        </div>
+      </div>
+
+      <div class="screenshot-group-title" data-i18n="sc.g2">MindEase</div>
+      <div class="screenshot-grid">
+        <div class="screenshot-wrap">
+          <div class="phone-frame">
+            <img src="../portfolio/img/mindease1.jpg" alt="MindEase - inicio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder-screen"><span>🌿</span><p>Home</p></div>
+          </div>
+          <span class="screenshot-label" data-i18n="sc.m1">Inicio</span>
+        </div>
+        <div class="screenshot-wrap">
+          <div class="phone-frame">
+            <img src="../portfolio/img/mindease2.jpg" alt="MindEase - chat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder-screen"><span>💬</span><p>Chat</p></div>
+          </div>
+          <span class="screenshot-label" data-i18n="sc.m2">Chat IA</span>
+        </div>
+        <div class="screenshot-wrap">
+          <div class="phone-frame">
+            <img src="../portfolio/img/mindease3.jpg" alt="MindEase - ejercicios" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder-screen"><span>🧘</span><p>CBT</p></div>
+          </div>
+          <span class="screenshot-label" data-i18n="sc.m3">Ejercicios CBT</span>
+        </div>
+        <div class="screenshot-wrap">
+          <div class="phone-frame">
+            <img src="../portfolio/img/mindease4.jpg" alt="MindEase - relajacion" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder-screen"><span>💆</span><p>Relax</p></div>
+          </div>
+          <span class="screenshot-label" data-i18n="sc.m4">Relajación</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="tools.label">Herramientas &amp; Flujo de Trabajo</div>
+      <h2 class="section-title" data-i18n="tools.title">Desarrollo Asistido por IA</h2>
+      <p class="section-desc" data-i18n="tools.desc">Más de 2000 horas con GitHub Copilot en VS Code para acelerar arquitectura, implementación y depuración de sistemas complejos.</p>
+
+      <h3 style="font-size:0.95rem; color:var(--muted); margin-bottom:10px;" data-i18n="tools.h1">Herramientas principales</h3>
+      <div class="tools-grid" style="margin-bottom:20px;">
+        <div class="tool-chip tool-primary">VS Code + GitHub Copilot</div>
+        <div class="tool-chip">Claude Sonnet / Opus</div>
+        <div class="tool-chip">OpenAI Codex</div>
+        <div class="tool-chip">Gemini</div>
+        <div class="tool-chip">Cursor</div>
+        <div class="tool-chip">Antigravity</div>
+      </div>
+
+      <h3 style="font-size:0.95rem; color:var(--muted); margin-bottom:10px;" data-i18n="tools.h4">Servidores MCP &amp; Automatización</h3>
+      <p style="color:var(--muted); font-size:0.9rem; margin-bottom:12px;" data-i18n="tools.mcp.desc">Integración de MCP personalizados con memoria persistente y contexto especializado por proyecto.</p>
+      <div class="tools-grid" style="margin-bottom:20px;">
+        <div class="tool-chip tool-primary">Engram (memoria persistente)</div>
+        <div class="tool-chip tool-primary">Context7 (docs en tiempo real)</div>
+        <div class="tool-chip">MCP personalizado</div>
+        <div class="tool-chip">Copilot Agent Mode</div>
+        <div class="tool-chip">Skills &amp; Instructions</div>
+      </div>
+
+      <h3 style="font-size:0.95rem; color:var(--muted); margin-bottom:10px;" data-i18n="tools.h2">Stack tecnológico</h3>
+      <div class="tools-grid" style="margin-bottom:20px;">
+        <div class="tool-chip">Android Studio</div>
+        <div class="tool-chip">Kotlin 1.9</div>
+        <div class="tool-chip">Jetpack Compose</div>
+        <div class="tool-chip">Material3</div>
+        <div class="tool-chip">Room / SQLite</div>
+        <div class="tool-chip">Gradle KTS</div>
+        <div class="tool-chip">GitHub CLI</div>
+        <div class="tool-chip">MediaPipe GenAI</div>
+        <div class="tool-chip">Enfusion SDK</div>
+        <div class="tool-chip">EnforceScript</div>
+        <div class="tool-chip">progressSQL</div>
+        <div class="tool-chip">MongoDB</div>
+        <div class="tool-chip">Google AdMob</div>
+        <div class="tool-chip">Play Billing API</div>
+      </div>
+
+      <h3 style="font-size:0.95rem; color:var(--muted); margin-bottom:10px;" data-i18n="tools.h3">Evolución del backend · bases de datos</h3>
+      <div class="db-timeline">
+        <div class="db-step">
+          <div class="phase" data-i18n="db.f1">Fase 1</div>
+          <div class="title">JSON local</div>
+          <div class="line" data-i18n="db.f1l">Archivos .json por jugador</div>
+        </div>
+        <div class="db-step">
+          <div class="phase" data-i18n="db.f2">Fase 2</div>
+          <div class="title">MongoDB</div>
+          <div class="line" data-i18n="db.f2l">Consultas flexibles, NoSQL</div>
+        </div>
+        <div class="db-step">
+          <div class="phase" data-i18n="db.f3">Fase 3 · Actual</div>
+          <div class="title">progressSQL</div>
+          <div class="line" data-i18n="db.f3l">Persistencia relacional completa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="phi.label">Filosofía</div>
+      <h2 class="section-title" data-i18n="phi.title">Cómo trabajo</h2>
+      <p class="section-desc" data-i18n="phi.desc">Principios de ingeniería y operación para producto, infraestructura y sistemas en producción.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3 data-i18n="phi1.h">Privacidad sin compromiso</h3>
+          <p data-i18n="phi1.p">Privacidad por diseño en cada capa del sistema: IA local, mínima recolección de datos y control del usuario.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3 data-i18n="phi2.h">Sistemas que escalan</h3>
+          <p data-i18n="phi2.p">Arquitecturas preparadas para crecer: apps Android, backends y frameworks de servidor con alta concurrencia.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3 data-i18n="phi3.h">IA como copiloto, no sustituto</h3>
+          <p data-i18n="phi3.p">Uso intensivo de IA para acelerar entregas, manteniendo criterio técnico humano en decisiones críticas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificados">
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="certs.label">Formación certificada</div>
+      <h2 class="section-title" data-i18n="certs.title">Certificados</h2>
+      <p class="section-desc" data-i18n="certs.desc">Formación continua en IA aplicada al desarrollo profesional.</p>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-logo">🤖</div>
+          <div>
+            <div class="cert-issuer">Anthropic</div>
+            <div class="cert-title">Claude 101</div>
+            <div class="cert-meta" data-i18n="cert1.meta">Emitido: 11 de mayo de 2026 · Nº fgc3ws7upbph</div>
+            <span class="cert-badge" data-i18n="cert.badge">Completado</span>
+            <a href="#" class="cert-link" data-i18n="cert.link">Ver certificado</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo">⌨️</div>
+          <div>
+            <div class="cert-issuer">Anthropic</div>
+            <div class="cert-title">Claude Code 101</div>
+            <div class="cert-meta" data-i18n="cert2.meta">Emitido: 11 de mayo de 2026</div>
+            <span class="cert-badge" data-i18n="cert.badge">Completado</span>
+            <a href="#" class="cert-link" data-i18n="cert.link">Ver certificado</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo">🤝</div>
+          <div>
+            <div class="cert-issuer">Anthropic</div>
+            <div class="cert-title" data-i18n="cert3.title">Introduction to Claude Cowork</div>
+            <div class="cert-meta" data-i18n="cert3.meta">Emitido: 13 de mayo de 2026</div>
+            <span class="cert-badge" data-i18n="cert.badge">Completado</span>
+            <a href="../portfolio/certs/claude-cowork.pdf" class="cert-link" target="_blank" rel="noopener noreferrer" data-i18n="cert.link">Ver certificado</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo">⚡</div>
+          <div>
+            <div class="cert-issuer">Anthropic</div>
+            <div class="cert-title" data-i18n="cert4.title">Claude Code in Action</div>
+            <div class="cert-meta" data-i18n="cert4.meta">Emitido: 13 de mayo de 2026 · Nº 524wbaecyt9y</div>
+            <span class="cert-badge" data-i18n="cert.badge">Completado</span>
+            <a href="../portfolio/certs/claude-code-in-action.pdf" class="cert-link" target="_blank" rel="noopener noreferrer" data-i18n="cert.link">Ver certificado</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <div class="contact">
+        <h2 data-i18n="contact.title">¿Hablamos?</h2>
+        <p data-i18n="contact.desc">Abierto a proyectos de desarrollo Android, DevOps, automatización con IA y consultoría técnica para productos y servidores.</p>
+        <a class="contact-email" href="mailto:arribasaisystem@gmail.com">arribasaisystem@gmail.com</a>
+        <div>
+          <a href="https://github.com/Arribas22" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub: Arribas22</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>© 2026 Alvaro Arribas</span>
+      <span> · </span>
+      <span data-i18n="footer.made">Desarrollado con GitHub Copilot &amp; Claude</span>
+      <span> · arribasaisystem@gmail.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const T = {
+      es: {
+        'nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Proyectos','nav.infra':'Infraestructura','nav.screenshots':'Capturas','nav.tools':'Herramientas','nav.certs':'Certificados','nav.contact':'Contacto',
+        'hero.kicker':'DevOps · Android · Sistemas de IA',
+        'hero.title':'Arquitectura, Operaciones y <span class="accent">Software de Alto Rendimiento</span>',
+        'hero.desc':'Ingeniero orientado a resultados reales en producción: desarrollo Android, infraestructura de servidores, automatización de flujos con IA y sistemas escalables para entornos de alta demanda.',
+        'hero.cta1':'Ver proyectos','hero.cta2':'Contactar',
+        'hero.m1v':'+2000 h','hero.m1l':'Desarrollo asistido con IA en VS Code',
+        'hero.m2v':'+10000 h','hero.m2l':'Desarrollo de servidores de juegos multiplataforma',
+        'hero.m3v':'20+ sistemas','hero.m3l':'Módulos RP interconectados en tiempo real',
+        'stats.s1v':'+2000 h','stats.s1l':'VS Code + Copilot','stats.s2v':'+10000 h','stats.s2l':'Servidores de juego','stats.s3v':'100%','stats.s3l':'Kotlin en Android nativo','stats.s4v':'20+','stats.s4l':'Sistemas RP desplegados',
+
+        'and.label':'Android Engineering','and.title':'Aplicaciones Android Profesionales','and.desc':'Arquitectura robusta, UX cuidada y enfoque en privacidad, rendimiento y mantenibilidad a largo plazo.',
+        'and.c1.h':'IA local y privacidad','and.c1.p':'Integración de modelos en dispositivo para respuestas rápidas y control de datos sin dependencia constante de la nube.',
+        'and.c2.h':'Arquitectura moderna','and.c2.p':'Clean Architecture, ViewModel, Room, estados predecibles y separación estricta de responsabilidades.',
+        'and.c3.h':'Monetización integrada','and.c3.p':'Google Play Billing y AdMob configurados con eventos medibles, pruebas y control de experiencia de usuario.',
+        'and.c4.h':'Privacidad por defecto','and.c4.p':'Diseño de apps con mínimo acceso a datos, consentimiento claro y políticas transparentes.',
+        'and.c5.h':'Publicación en Google Play','and.c5.p':'Pipeline completo desde build firmada hasta despliegue y mantenimiento de versiones.',
+        'and.c6.h':'Material 3 y UX real','and.c6.p':'Interfaces limpias y coherentes, enfocadas en legibilidad, velocidad de uso y adopción.',
+
+        'enf.label':'Enfusion Full Stack','enf.title':'Framework RP Escalable para Arma Reforger','enf.desc':'Construcción de ecosistema técnico completo: frontend, backend, proxy y evolución de persistencia para servidores de juego en producción.',
+        'enf.c1.h':'Frontend en Enfusion','enf.c1.p':'UI, lógica de cliente y sistemas de interacción real-time para experiencia fluida in-game.',
+        'enf.c2.h':'Backend de sistemas RP','enf.c2.p':'Servicios modulares para facciones, economía, inventarios, vehículos, telefonía y automatizaciones.',
+        'enf.c3.h':'Proxy y comunicaciones','enf.c3.p':'Capa intermedia para desacoplar cliente y servicios, mejorar seguridad y control de tráfico.',
+        'enf.c4.h':'Evolución de base de datos','enf.c4.p':'Migración progresiva JSON → MongoDB → progressSQL según necesidades de rendimiento y consistencia.',
+
+        'sys.1':'Sistema de vehículos','sys.2':'Sistema de facciones','sys.3':'Sistema de inventario','sys.4':'Sistema bancario','sys.5':'Sistema de propiedades',
+        'sys.6':'Sistema de telefonía','sys.7':'Sistema de empleos','sys.8':'Sistema de tiendas','sys.9':'Sistema de crafting','sys.10':'Sistema médico',
+        'sys.11':'Sistema policial','sys.12':'Sistema legal','sys.13':'Sistema de permisos','sys.14':'Sistema de logs','sys.15':'Sistema anti-cheat',
+        'sys.16':'Sistema de economía','sys.17':'Sistema de notificaciones','sys.18':'Sistema de spawn','sys.19':'Sistema de progreso','sys.20':'Sistema de administración',
+
+        'pr.label':'Proyectos destacados','pr.title':'Producto, Infraestructura y Sistemas','pr.desc':'Proyectos reales con foco en fiabilidad, escalabilidad y mantenibilidad en producción.',
+        'pr.c1.p':'App Android enfocada en bienestar mental con IA local, ejercicios CBT y diseño orientado a privacidad.',
+        'pr.c2.p':'Aplicación Android para automatizar reglas de desvío de llamadas según horarios y perfiles configurables.',
+        'pr.c3.p':'Framework completo para servidor RP en Arma Reforger con más de 20 sistemas integrados y backend propio.',
+        'pr.c4.p':'Proyecto Android de grabación con enfoque en calidad de audio, estabilidad de servicio y reglas legales por región.',
+        'status.live':'En producción','status.dev':'En desarrollo',
+
+        'infra.label':'Infraestructura &amp; DevOps','infra.title':'Administración de Servidores &amp; Sistemas','infra.desc':'Gestión operativa en producción: servidores, red, seguridad, bases de datos y procesos de depuración para estabilidad real.',
+        'infra.c1.h':'VPS &amp; Windows Server','infra.c1.p':'Administración de VPS en Windows Server: roles, usuarios, RDP, actualizaciones y mantenimiento continuo.',
+        'infra.c2.h':'Firewall &amp; Seguridad de Red','infra.c2.p':'Reglas de firewall, auditoría de puertos, análisis de tráfico y hardening para entornos con usuarios reales.',
+        'infra.c3.h':'XAMPP &amp; Servicios Web','infra.c3.p':'Despliegue y mantenimiento de Apache y MySQL con virtual hosts, acceso remoto seguro y operación estable.',
+        'infra.c4.h':'Aprendizaje en Cualquier Entorno','infra.c4.p':'Adaptación rápida a nuevas tecnologías, herramientas y stacks para llevar ideas a producción en tiempo mínimo.',
+        'infra.c5.h':'Exploración de Bases de Datos','infra.c5.p':'Experiencia en MySQL Workbench y HeidiSQL para análisis de esquemas, consultas y mantenimiento de datos.',
+        'infra.c6.h':'Depuración &amp; Análisis de Errores','infra.c6.p':'Ciclo estricto de debugging en todos los proyectos: análisis de logs, reproducción de errores y fixes verificadas.',
+
+        'sc.label':'Apps en acción','sc.title':'Capturas de pantalla','sc.desc':'Pantallas reales de las aplicaciones en dispositivos físicos.',
+        'sc.g1':'Desvío Programado','sc.g2':'MindEase','sc.d1':'Pantalla principal','sc.d2':'Editar regla','sc.d3':'Resumen','sc.m1':'Inicio','sc.m2':'Chat IA','sc.m3':'Ejercicios CBT','sc.m4':'Relajación',
+
+        'tools.label':'Herramientas &amp; Flujo de Trabajo','tools.title':'Desarrollo Asistido por IA','tools.desc':'Más de 2000 horas con GitHub Copilot en VS Code para acelerar arquitectura, implementación y depuración de sistemas complejos.',
+        'tools.h1':'Herramientas principales','tools.h2':'Stack tecnológico','tools.h3':'Evolución del backend · bases de datos','tools.h4':'Servidores MCP &amp; Automatización',
+        'tools.mcp.desc':'Integración de MCP personalizados con memoria persistente y contexto especializado por proyecto.',
+        'db.f1':'Fase 1','db.f1l':'Archivos .json por jugador','db.f2':'Fase 2','db.f2l':'Consultas flexibles, NoSQL','db.f3':'Fase 3 · Actual','db.f3l':'Persistencia relacional completa',
+
+        'phi.label':'Filosofía','phi.title':'Cómo trabajo','phi.desc':'Principios de ingeniería y operación para producto, infraestructura y sistemas en producción.',
+        'phi1.h':'Privacidad sin compromiso','phi1.p':'Privacidad por diseño en cada capa del sistema: IA local, mínima recolección de datos y control del usuario.',
+        'phi2.h':'Sistemas que escalan','phi2.p':'Arquitecturas preparadas para crecer: apps Android, backends y frameworks de servidor con alta concurrencia.',
+        'phi3.h':'IA como copiloto, no sustituto','phi3.p':'Uso intensivo de IA para acelerar entregas, manteniendo criterio técnico humano en decisiones críticas.',
+
+        'certs.label':'Formación certificada','certs.title':'Certificados','certs.desc':'Formación continua en IA aplicada al desarrollo profesional.',
+        'cert1.meta':'Emitido: 11 de mayo de 2026 · Nº fgc3ws7upbph','cert2.meta':'Emitido: 11 de mayo de 2026',
+        'cert3.title':'Introduction to Claude Cowork','cert3.meta':'Emitido: 13 de mayo de 2026',
+        'cert4.title':'Claude Code in Action','cert4.meta':'Emitido: 13 de mayo de 2026 · Nº 524wbaecyt9y',
+        'cert.badge':'Completado','cert.link':'Ver certificado',
+
+        'contact.title':'¿Hablamos?','contact.desc':'Abierto a proyectos de desarrollo Android, DevOps, automatización con IA y consultoría técnica para productos y servidores.',
+        'footer.made':'Desarrollado con GitHub Copilot &amp; Claude'
+      },
+      en: {
+        'nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Projects','nav.infra':'Infrastructure','nav.screenshots':'Screenshots','nav.tools':'Tools','nav.certs':'Certificates','nav.contact':'Contact',
+        'hero.kicker':'DevOps · Android · AI Systems',
+        'hero.title':'Architecture, Operations and <span class="accent">High-Performance Software</span>',
+        'hero.desc':'Engineer focused on real production outcomes: Android development, server infrastructure, AI workflow automation and scalable systems for high-demand environments.',
+        'hero.cta1':'View projects','hero.cta2':'Contact',
+        'hero.m1v':'+2000 h','hero.m1l':'AI-assisted development in VS Code',
+        'hero.m2v':'+10000 h','hero.m2l':'Multiplatform game server development',
+        'hero.m3v':'20+ systems','hero.m3l':'Interconnected real-time RP modules',
+        'stats.s1v':'+2000 h','stats.s1l':'VS Code + Copilot','stats.s2v':'+10000 h','stats.s2l':'Game servers','stats.s3v':'100%','stats.s3l':'Native Kotlin Android','stats.s4v':'20+','stats.s4l':'Deployed RP systems',
+
+        'and.label':'Android Engineering','and.title':'Professional Android Applications','and.desc':'Robust architecture, polished UX and strong focus on privacy, performance and long-term maintainability.',
+        'and.c1.h':'On-device AI & privacy','and.c1.p':'Device-side model integration for fast responses and data control without full cloud dependency.',
+        'and.c2.h':'Modern architecture','and.c2.p':'Clean Architecture, ViewModel, Room, predictable state and strict separation of responsibilities.',
+        'and.c3.h':'Integrated monetization','and.c3.p':'Google Play Billing and AdMob with measurable events, tests and user-experience safeguards.',
+        'and.c4.h':'Privacy by default','and.c4.p':'Apps designed with minimal data access, clear consent and transparent policies.',
+        'and.c5.h':'Google Play release pipeline','and.c5.p':'Complete flow from signed build to deployment and release maintenance.',
+        'and.c6.h':'Material 3 and practical UX','and.c6.p':'Clean, coherent interfaces focused on readability, speed and adoption.',
+
+        'enf.label':'Enfusion Full Stack','enf.title':'Scalable RP Framework for Arma Reforger','enf.desc':'Complete technical ecosystem: frontend, backend, proxy and persistence evolution for production game servers.',
+        'enf.c1.h':'Enfusion frontend','enf.c1.p':'UI, client logic and real-time interaction systems for smooth in-game experience.',
+        'enf.c2.h':'RP systems backend','enf.c2.p':'Modular services for factions, economy, inventory, vehicles, telephony and automation.',
+        'enf.c3.h':'Proxy and communications','enf.c3.p':'Middleware layer to decouple clients and services, improve security and traffic control.',
+        'enf.c4.h':'Database evolution','enf.c4.p':'Progressive migration JSON → MongoDB → progressSQL based on performance and consistency needs.',
+
+        'sys.1':'Vehicle system','sys.2':'Faction system','sys.3':'Inventory system','sys.4':'Banking system','sys.5':'Property system',
+        'sys.6':'Phone system','sys.7':'Jobs system','sys.8':'Shops system','sys.9':'Crafting system','sys.10':'Medical system',
+        'sys.11':'Police system','sys.12':'Legal system','sys.13':'Permissions system','sys.14':'Logging system','sys.15':'Anti-cheat system',
+        'sys.16':'Economy system','sys.17':'Notification system','sys.18':'Spawn system','sys.19':'Progression system','sys.20':'Admin system',
+
+        'pr.label':'Featured projects','pr.title':'Product, Infrastructure and Systems','pr.desc':'Real projects focused on reliability, scalability and production maintainability.',
+        'pr.c1.p':'Android app focused on mental wellness with on-device AI, CBT exercises and privacy-first design.',
+        'pr.c2.p':'Android app to automate call-forwarding rules based on schedule and configurable profiles.',
+        'pr.c3.p':'Complete RP server framework for Arma Reforger with 20+ integrated systems and custom backend.',
+        'pr.c4.p':'Android recorder project focused on audio quality, service stability and region-specific legal compliance.',
+        'status.live':'Production','status.dev':'In development',
+
+        'infra.label':'Infrastructure &amp; DevOps','infra.title':'Server &amp; Systems Administration','infra.desc':'Production operations: servers, network, security, databases and debugging processes for real stability.',
+        'infra.c1.h':'VPS &amp; Windows Server','infra.c1.p':'VPS administration on Windows Server: roles, users, RDP, updates and continuous maintenance.',
+        'infra.c2.h':'Firewall &amp; Network Security','infra.c2.p':'Firewall rules, port auditing, traffic analysis and hardening for real-user environments.',
+        'infra.c3.h':'XAMPP &amp; Web Services','infra.c3.p':'Apache and MySQL deployment and maintenance with virtual hosts and secure remote access.',
+        'infra.c4.h':'Learning in any environment','infra.c4.p':'Fast adaptation to new technologies, tools and stacks to move ideas into production quickly.',
+        'infra.c5.h':'Database exploration','infra.c5.p':'Experience with MySQL Workbench and HeidiSQL for schema analysis, queries and data maintenance.',
+        'infra.c6.h':'Debugging &amp; error analysis','infra.c6.p':'Strict debugging cycle across projects: log analysis, error reproduction and verified fixes.',
+
+        'sc.label':'Apps in action','sc.title':'Screenshots','sc.desc':'Real app screens on physical devices.',
+        'sc.g1':'Scheduled Forwarding','sc.g2':'MindEase','sc.d1':'Main screen','sc.d2':'Edit rule','sc.d3':'Summary','sc.m1':'Home','sc.m2':'AI chat','sc.m3':'CBT exercises','sc.m4':'Relaxation',
+
+        'tools.label':'Tools &amp; Workflow','tools.title':'AI-Assisted Development','tools.desc':'More than 2000 hours with GitHub Copilot in VS Code to accelerate architecture, implementation and debugging.',
+        'tools.h1':'Core tools','tools.h2':'Technology stack','tools.h3':'Backend evolution · databases','tools.h4':'MCP servers &amp; automation',
+        'tools.mcp.desc':'Custom MCP integrations with persistent memory and project-specific context.',
+        'db.f1':'Phase 1','db.f1l':'Local .json per player','db.f2':'Phase 2','db.f2l':'Flexible queries, NoSQL','db.f3':'Phase 3 · Current','db.f3l':'Complete relational persistence',
+
+        'phi.label':'Philosophy','phi.title':'How I work','phi.desc':'Engineering and operations principles for product, infrastructure and production systems.',
+        'phi1.h':'Privacy without compromise','phi1.p':'Privacy by design at every system layer: on-device AI, minimal data collection and user control.',
+        'phi2.h':'Systems that scale','phi2.p':'Architectures built to grow: Android apps, backends and high-concurrency server frameworks.',
+        'phi3.h':'AI as copilot, not substitute','phi3.p':'Intensive AI use to accelerate delivery while preserving human technical judgment for critical decisions.',
+
+        'certs.label':'Certified training','certs.title':'Certificates','certs.desc':'Continuous education in AI applied to professional software development.',
+        'cert1.meta':'Issued: May 11, 2026 · No. fgc3ws7upbph','cert2.meta':'Issued: May 11, 2026',
+        'cert3.title':'Introduction to Claude Cowork','cert3.meta':'Issued: May 13, 2026',
+        'cert4.title':'Claude Code in Action','cert4.meta':'Issued: May 13, 2026 · No. 524wbaecyt9y',
+        'cert.badge':'Completed','cert.link':'View certificate',
+
+        'contact.title':'Shall we talk?','contact.desc':'Open to Android development, DevOps, AI automation and technical consulting for products and servers.',
+        'footer.made':'Built with GitHub Copilot &amp; Claude'
+      }
+    };
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+      const map = T[lang] || T.es;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        if (map[key]) {
+          el.innerHTML = map[key];
+        }
+      });
+      const btn = document.getElementById('lang-btn');
+      btn.textContent = lang === 'es' ? 'EN' : 'ES';
+      localStorage.setItem('pf-lang', lang);
+    }
+
+    function toggleLang() {
+      const current = localStorage.getItem('pf-lang') || 'es';
+      applyLang(current === 'es' ? 'en' : 'es');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('pf-lang') || 'es';
+      applyLang(saved);
+    });
+  </script>
+</body>
+</html>
