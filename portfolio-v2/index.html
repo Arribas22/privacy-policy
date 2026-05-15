@@ -726,7 +726,88 @@
       text-align: center;
     }
 
+    .exp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .exp-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: linear-gradient(145deg, rgba(20,18,15,0.98), rgba(14,12,10,0.96));
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.2s ease;
+    }
+
+    .exp-card:hover {
+      border-color: rgba(232, 118, 42, 0.45);
+    }
+
+    .exp-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .exp-role {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #fff;
+    }
+
+    .exp-org {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .exp-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      margin-left: 6px;
+    }
+
+    .exp-link:hover { opacity: 1; }
+
+    .exp-date {
+      font-size: 0.72rem;
+      color: var(--muted);
+      white-space: nowrap;
+      font-family: "JetBrains Mono", monospace;
+      margin-top: 4px;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 3px 8px;
+    }
+
+    .exp-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
     @media (max-width: 1100px) {
+      .exp-grid { grid-template-columns: 1fr; }
+    }
       .hero {
         grid-template-columns: 1fr;
       }
@@ -794,6 +875,7 @@
         <span>ALVARO ARRIBAS</span>
       </div>
       <div class="nav-links">
+        <a href="#experience" data-i18n="nav.exp">Experiencia</a>
         <a href="#android" data-i18n="nav.android">Android</a>
         <a href="#enfusion" data-i18n="nav.enfusion">Enfusion</a>
         <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
@@ -855,6 +937,47 @@
       </div>
     </div>
   </div>
+
+  <section id="experience">
+    <div class="container section-shell">
+      <div class="section-label" data-i18n="exp.label">Experiencia Profesional</div>
+      <h2 class="section-title" data-i18n="exp.title">Lead Developer — Proyectos Activos</h2>
+      <p class="section-desc" data-i18n="exp.desc">Responsable técnico de dos servidores de roleplay en producción basados en Arma Reforger, uno hispanohablante y otro en inglés, con frameworks propios desde cero.</p>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role" data-i18n="exp.e1.role">Lead Developer</div>
+              <div class="exp-org">Distrito Hispano RP <a href="https://distritohispano.es/" class="exp-link" target="_blank" rel="noopener noreferrer">↗</a></div>
+            </div>
+            <div class="exp-date" data-i18n="exp.e1.date">2024 – PRESENTE</div>
+          </div>
+          <p class="exp-desc" data-i18n="exp.e1.body">Responsable técnico único del framework RP en EnforceScript para la comunidad hispanohablante más completa de Arma Reforger. 20+ sistemas en producción: economía, inventario, facciones, telefonía, policial y persistencia. Backend escalado de JSON → MongoDB → progressSQL.</p>
+          <div class="exp-tags">
+            <span class="tag">EnforceScript</span>
+            <span class="tag">Arma Reforger</span>
+            <span class="tag">ES · LATAM</span>
+            <span class="tag">500+ miembros</span>
+          </div>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role" data-i18n="exp.e2.role">Lead Developer</div>
+              <div class="exp-org">Arma4Life <a href="https://arma4life.com/" class="exp-link" target="_blank" rel="noopener noreferrer">↗</a></div>
+            </div>
+            <div class="exp-date" data-i18n="exp.e2.date">2024 – PRESENTE</div>
+          </div>
+          <p class="exp-desc" data-i18n="exp.e2.body">Lead Developer del servidor de roleplay de habla inglesa en Arma Reforger. Diseño e implementación del framework técnico, sistemas de juego y arquitectura de backend para la comunidad internacional.</p>
+          <div class="exp-tags">
+            <span class="tag">EnforceScript</span>
+            <span class="tag">Arma Reforger</span>
+            <span class="tag">EN · International</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="android">
     <div class="container section-shell">
@@ -1304,7 +1427,10 @@
   <script>
     const T = {
       es: {
-        'nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Proyectos','nav.infra':'Infraestructura','nav.screenshots':'Capturas','nav.tools':'Herramientas','nav.certs':'Certificados','nav.contact':'Contacto',
+        'nav.exp':'Experiencia','nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Proyectos','nav.infra':'Infraestructura','nav.screenshots':'Capturas','nav.tools':'Herramientas','nav.certs':'Certificados','nav.contact':'Contacto',
+        'exp.label':'Experiencia Profesional','exp.title':'Lead Developer — Proyectos Activos','exp.desc':'Responsable técnico de dos servidores de roleplay en producción basados en Arma Reforger, uno hispanohablante y otro en inglés.',
+        'exp.e1.role':'Lead Developer','exp.e1.date':'2024 – PRESENTE','exp.e1.body':'Responsable técnico único del framework RP en EnforceScript para la comunidad hispanohablante más completa de Arma Reforger. 20+ sistemas en producción: economía, inventario, facciones, telefonía, policial y persistencia. Backend escalado de JSON → MongoDB → progressSQL con cientos de usuarios activos.',
+        'exp.e2.role':'Lead Developer','exp.e2.date':'2024 – PRESENTE','exp.e2.body':'Lead Developer del servidor de roleplay de habla inglesa en Arma Reforger. Diseño e implementación del framework técnico, sistemas de juego y arquitectura de backend para la comunidad internacional.',
         'hero.kicker':'DevOps · Android · Sistemas de IA',
         'hero.title':'Arquitectura, Operaciones y <span class="accent">Software de Alto Rendimiento</span>',
         'hero.desc':'Ingeniero orientado a resultados reales en producción: desarrollo Android, infraestructura de servidores, automatización de flujos con IA y sistemas escalables para entornos de alta demanda.',
@@ -1375,7 +1501,10 @@
         'footer.made':'Desarrollado con GitHub Copilot &amp; Claude'
       },
       en: {
-        'nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Projects','nav.infra':'Infrastructure','nav.screenshots':'Screenshots','nav.tools':'Tools','nav.certs':'Certificates','nav.contact':'Contact',
+        'nav.exp':'Experience','nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Projects','nav.infra':'Infrastructure','nav.screenshots':'Screenshots','nav.tools':'Tools','nav.certs':'Certificates','nav.contact':'Contact',
+        'exp.label':'Professional Experience','exp.title':'Lead Developer — Active Projects','exp.desc':'Technical lead for two production roleplay servers built on Arma Reforger — one Spanish-speaking and one English-speaking community.',
+        'exp.e1.role':'Lead Developer','exp.e1.date':'2024 – PRESENT','exp.e1.body':'Sole technical lead for the EnforceScript RP framework powering the most complete Spanish-speaking Arma Reforger community. 20+ systems in production: economy, inventory, factions, phone, police and persistence. Backend scaled from JSON → MongoDB → progressSQL with hundreds of active users.',
+        'exp.e2.role':'Lead Developer','exp.e2.date':'2024 – PRESENT','exp.e2.body':'Lead Developer for the English-speaking Arma Reforger roleplay server. Design and implementation of the technical framework, game systems and backend architecture for the international community.',
         'hero.kicker':'DevOps · Android · AI Systems',
         'hero.title':'Architecture, Operations and <span class="accent">High-Performance Software</span>',
         'hero.desc':'Engineer focused on real production outcomes: Android development, server infrastructure, AI workflow automation and scalable systems for high-demand environments.',
