@@ -470,6 +470,7 @@
 <nav>
   <span class="nav-brand">Álvaro Arribas</span>
   <div class="nav-links">
+    <a href="#experience" data-i18n="nav.exp">Experiencia</a>
     <a href="#android" data-i18n="nav.android">Android</a>
     <a href="#enfusion" data-i18n="nav.enfusion">Enfusion</a>
     <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
@@ -514,6 +515,38 @@
     <span class="stat-label" data-i18n="stat4.label">Sistemas RP desarrollados</span>
   </div>
 </div>
+
+<!-- EXPERIENCIA PROFESIONAL -->
+<section id="experience">
+  <div class="section-label" data-i18n="exp.label">Experiencia Profesional</div>
+  <h2 class="section-title" data-i18n="exp.title">Lead Developer — Proyectos Activos</h2>
+  <p class="section-desc" data-i18n="exp.desc">Responsable técnico de dos servidores de roleplay en producción basados en Arma Reforger, uno hispanohablante y otro en inglés, con frameworks propios desarrollados desde cero.</p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date" data-i18n="exp.e1.date">2024 · Presente</div>
+      <div class="timeline-title" data-i18n="exp.e1.title">Lead Developer — Distrito Hispano RP</div>
+      <div class="timeline-body" data-i18n="exp.e1.body">Responsable técnico único del framework RP en EnforceScript para la comunidad hispanohablante más completa de Arma Reforger. Más de 20 sistemas en producción: economía, inventario, facciones, telefonía, sistema policial y backend de persistencia. Arquitectura escalada de JSON → MongoDB → progressSQL con cientos de usuarios activos.</div>
+      <div style="margin-top:10px">
+        <span class="tag">EnforceScript</span>
+        <span class="tag">Arma Reforger</span>
+        <span class="tag">ES · LATAM</span>
+        <span class="tag">500+ miembros</span>
+        <a href="https://distritohispano.es/" target="_blank" rel="noopener noreferrer" class="tag" style="text-decoration:none">↗ distritohispano.es</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date" data-i18n="exp.e2.date">2024 · Presente</div>
+      <div class="timeline-title" data-i18n="exp.e2.title">Lead Developer — Arma4Life</div>
+      <div class="timeline-body" data-i18n="exp.e2.body">Lead Developer del servidor de roleplay de habla inglesa en Arma Reforger. Diseño e implementación del framework técnico del servidor, sistemas de juego y arquitectura de backend para la comunidad internacional.</div>
+      <div style="margin-top:10px">
+        <span class="tag">EnforceScript</span>
+        <span class="tag">Arma Reforger</span>
+        <span class="tag">EN · International</span>
+        <a href="https://arma4life.com/" target="_blank" rel="noopener noreferrer" class="tag" style="text-decoration:none">↗ arma4life.com</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ANDROID + IA -->
 <section id="android">
@@ -1090,8 +1123,12 @@
 <script>
 const T = {
   es: {
-    'nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Proyectos',
+    'nav.exp':'Experiencia','nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Proyectos',
     'nav.infra':'Infraestructura',
+    'exp.label':'Experiencia Profesional','exp.title':'Lead Developer — Proyectos Activos','exp.desc':'Responsable técnico de dos servidores de roleplay en producción basados en Arma Reforger, uno hispanohablante y otro en inglés.',
+    'exp.e1.date':'2024 · Presente','exp.e1.title':'Lead Developer — Distrito Hispano RP','exp.e1.body':'Responsable técnico único del framework RP en EnforceScript para la comunidad hispanohablante más completa de Arma Reforger. Más de 20 sistemas en producción: economía, inventario, facciones, telefonía, policial y persistencia. Arquitectura escalada de JSON → MongoDB → progressSQL con cientos de usuarios activos.',
+    'exp.e2.date':'2024 · Presente','exp.e2.title':'Lead Developer — Arma4Life','exp.e2.body':'Lead Developer del servidor de roleplay de habla inglesa en Arma Reforger. Diseño e implementación del framework técnico, sistemas de juego y arquitectura de backend para la comunidad internacional.',
+
     'nav.screenshots':'Capturas','nav.tools':'Herramientas','nav.certs':'Certificados','nav.contact':'Contacto',
     'hero.badge':'Disponible para proyectos','hero.subtitle':'Desarrollador de Software',
     'hero.desc':'Android nativo con IA local offline &middot; Game systems en EnforceScript/Enfusion &middot; Más de 2000 horas impulsado por GitHub Copilot',
@@ -1162,8 +1199,12 @@ const T = {
     'footer.made':'Desarrollado con GitHub Copilot &amp; Claude',
   },
   en: {
-    'nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Projects',
+    'nav.exp':'Experience','nav.android':'Android','nav.enfusion':'Enfusion','nav.projects':'Projects',
     'nav.infra':'Infrastructure',
+    'exp.label':'Professional Experience','exp.title':'Lead Developer — Active Projects','exp.desc':'Technical lead for two production roleplay servers built on Arma Reforger — one Spanish-speaking community and one English-speaking community.',
+    'exp.e1.date':'2024 · Present','exp.e1.title':'Lead Developer — Distrito Hispano RP','exp.e1.body':'Sole technical lead for the EnforceScript RP framework powering the most complete Spanish-speaking Arma Reforger community. 20+ systems in production: economy, inventory, factions, phone, police and persistence. Backend scaled from JSON → MongoDB → progressSQL with hundreds of active users.',
+    'exp.e2.date':'2024 · Present','exp.e2.title':'Lead Developer — Arma4Life','exp.e2.body':'Lead Developer for the English-speaking Arma Reforger roleplay server. Design and implementation of the technical framework, game systems and backend architecture for the international community.',
+
     'nav.screenshots':'Screenshots','nav.tools':'Tools','nav.certs':'Certificates','nav.contact':'Contact',
     'hero.badge':'Available for projects','hero.subtitle':'Software Developer',
     'hero.desc':'Native Android with local offline AI &middot; Game systems in EnforceScript/Enfusion &middot; Over 2000 hours powered by GitHub Copilot',
