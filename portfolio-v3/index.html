@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Álvaro Arribas — Software Developer</title>
+  <meta name="description" content="Desarrollador independiente especializado en Android nativo, game systems engineering e infraestructura de servidores." />
+  <meta property="og:title" content="Álvaro Arribas — Software Developer" />
+  <meta property="og:description" content="Independent software developer specializing in Android, game engineering and AI-driven development." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Home">AA</a>
+      <div class="nav-center" role="list">
+        <a href="#experience" data-i18n="nav.exp" class="nav-link" role="listitem">Experiencia</a>
+        <a href="#projects"   data-i18n="nav.projects" class="nav-link" role="listitem">Proyectos</a>
+        <a href="#stack"      data-i18n="nav.stack" class="nav-link" role="listitem">Stack</a>
+        <a href="#contact"    data-i18n="nav.contact" class="nav-link" role="listitem">Contacto</a>
+      </div>
+      <button class="lang-btn" id="lang-btn" aria-label="Switch language">EN</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ================================================
+         HERO
+    ================================================ -->
+    <section id="hero" class="hero" aria-label="Introducción">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left: content -->
+          <div class="hero-content">
+            <div class="hero-badge reveal" data-i18n="hero.badge">Disponible para proyectos</div>
+
+            <h1 class="hero-name reveal reveal-d1">Álvaro<br />Arribas</h1>
+
+            <p class="hero-title reveal reveal-d2" data-i18n="hero.title">
+              Independent Software Developer
+            </p>
+
+            <p class="hero-desc reveal reveal-d3" data-i18n="hero.desc">
+              Android nativo · Game systems en Arma Reforger · Infraestructura de servidores · Desarrollo asistido por IA
+            </p>
+
+            <div class="hero-actions reveal reveal-d4">
+              <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">Ver proyectos</a>
+              <a href="#contact"  class="btn btn-ghost"   data-i18n="hero.cta2">Contactar</a>
+            </div>
+
+            <div class="hero-stats reveal reveal-d5" role="list" aria-label="Key stats">
+              <div class="hero-stat" role="listitem">
+                <span class="stat-val">+10K</span>
+                <span class="stat-lbl" data-i18n="stat1">Horas en servidores de juego</span>
+              </div>
+              <div class="hero-stat" role="listitem">
+                <span class="stat-val">+2K</span>
+                <span class="stat-lbl" data-i18n="stat2">Horas con GitHub Copilot</span>
+              </div>
+              <div class="hero-stat" role="listitem">
+                <span class="stat-val">20+</span>
+                <span class="stat-lbl" data-i18n="stat3">Sistemas RP en producción</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: code card -->
+          <div class="hero-visual reveal reveal-d2" aria-hidden="true">
+            <div class="code-card">
+              <div class="code-header">
+                <div class="code-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="code-tab">developer.config.ts</span>
+              </div>
+              <pre class="code-body"><code><span class="c-kw">const</span> <span class="c-var">developer</span> <span class="c-op">=</span> {
+  name<span class="c-op">:</span>      <span class="c-str">"Álvaro Arribas"</span>,
+  role<span class="c-op">:</span>      <span class="c-str">"Independent SW Dev"</span>,
+  platforms<span class="c-op">:</span> [
+    <span class="c-str">"Android"</span>,
+    <span class="c-str">"Arma Reforger"</span>,
+    <span class="c-str">"Server Infrastructure"</span>
+  ],
+
+  ai_tools<span class="c-op">:</span> {
+    primary<span class="c-op">:</span> <span class="c-str">"GitHub Copilot"</span>,
+    llm<span class="c-op">:</span>     <span class="c-str">"Claude"</span>,
+    hours<span class="c-op">:</span>   <span class="c-num">2000</span><span class="c-op">+</span>
+  },
+
+  status<span class="c-op">:</span> <span class="c-str">"available"</span> <span class="c-cmt">// open to work</span>
+}</code></pre>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         EXPERIENCE
+    ================================================ -->
+    <section id="experience" class="section section-alt" aria-labelledby="exp-title">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-num" aria-hidden="true">01</span>
+          <div>
+            <p class="section-label" data-i18n="exp.label">Experiencia Profesional</p>
+            <h2 class="section-title" id="exp-title" data-i18n="exp.title">Lead Developer en Producción</h2>
+          </div>
+        </header>
+
+        <div class="exp-grid">
+
+          <article class="exp-card reveal reveal-d1">
+            <header class="exp-card-header">
+              <div class="exp-role-wrap">
+                <span class="exp-role" data-i18n="exp.e1.role">Lead Developer</span>
+                <span class="exp-badge active" data-i18n="badge.active">Activo</span>
+              </div>
+              <a href="https://distritohispano.es/" target="_blank" rel="noopener noreferrer" class="exp-org-link">
+                <span class="exp-org">Distrito Hispano RP</span>
+                <svg width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </header>
+            <p class="exp-date" data-i18n="exp.e1.date">2024 — Presente</p>
+            <p class="exp-body" data-i18n="exp.e1.body">
+              Responsable técnico único del framework RP en EnforceScript para la comunidad hispanohablante más completa de Arma Reforger. 20+ sistemas en producción: economía, inventario, facciones, telefonía, policial y persistencia. Backend escalado de JSON → MongoDB → progressSQL.
+            </p>
+            <div class="exp-tags" role="list" aria-label="Technologies">
+              <span class="chip" role="listitem">EnforceScript</span>
+              <span class="chip" role="listitem">Arma Reforger</span>
+              <span class="chip" role="listitem">ES · LATAM</span>
+              <span class="chip chip-accent" role="listitem">500+ miembros</span>
+            </div>
+          </article>
+
+          <article class="exp-card reveal reveal-d2">
+            <header class="exp-card-header">
+              <div class="exp-role-wrap">
+                <span class="exp-role" data-i18n="exp.e2.role">Lead Developer</span>
+                <span class="exp-badge active" data-i18n="badge.active">Activo</span>
+              </div>
+              <a href="https://arma4life.com/" target="_blank" rel="noopener noreferrer" class="exp-org-link">
+                <span class="exp-org">Arma4Life</span>
+                <svg width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </header>
+            <p class="exp-date" data-i18n="exp.e2.date">2024 — Presente</p>
+            <p class="exp-body" data-i18n="exp.e2.body">
+              Lead Developer del servidor de roleplay de habla inglesa en Arma Reforger. Diseño e implementación del framework técnico, sistemas de juego y arquitectura de backend para la comunidad internacional.
+            </p>
+            <div class="exp-tags" role="list" aria-label="Technologies">
+              <span class="chip" role="listitem">EnforceScript</span>
+              <span class="chip" role="listitem">Arma Reforger</span>
+              <span class="chip chip-accent" role="listitem">EN · International</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         PROJECTS
+    ================================================ -->
+    <section id="projects" class="section" aria-labelledby="proj-title">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-num" aria-hidden="true">02</span>
+          <div>
+            <p class="section-label" data-i18n="proj.label">Proyectos Destacados</p>
+            <h2 class="section-title" id="proj-title" data-i18n="proj.title">Producto en Producción</h2>
+          </div>
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal reveal-d1">
+            <div class="proj-top">
+              <div class="proj-icon" aria-hidden="true">🧠</div>
+              <div class="proj-links">
+                <a href="https://github.com/Arribas22/mindease-android" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub repository for MindEase">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="proj-name">MindEase</h3>
+            <p class="proj-platform" data-i18n="proj.platform.android">Android · Google Play</p>
+            <p class="proj-desc" data-i18n="proj.mindease.desc">App de bienestar mental con IA local (Gemma 3 1B offline), ejercicios CBT, análisis de estado emocional y diseño orientado a privacidad total.</p>
+            <div class="proj-tags" role="list">
+              <span class="chip" role="listitem">Kotlin</span>
+              <span class="chip" role="listitem">Jetpack Compose</span>
+              <span class="chip" role="listitem">MediaPipe</span>
+              <span class="chip" role="listitem">Room</span>
+              <span class="chip chip-status live" role="listitem" data-i18n="status.live">En producción</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-d2">
+            <div class="proj-top">
+              <div class="proj-icon" aria-hidden="true">📞</div>
+              <div class="proj-links">
+                <a href="https://github.com/Arribas22/desvio-programado-android" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub repository for Desvío Programado">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="proj-name">Desvío Programado</h3>
+            <p class="proj-platform" data-i18n="proj.platform.android">Android · Google Play</p>
+            <p class="proj-desc" data-i18n="proj.desvio.desc">Automatización de reglas de desvío de llamadas basadas en horarios y perfiles configurables. Lógica en background con WorkManager, sin permisos innecesarios.</p>
+            <div class="proj-tags" role="list">
+              <span class="chip" role="listitem">Kotlin</span>
+              <span class="chip" role="listitem">WorkManager</span>
+              <span class="chip" role="listitem">DataStore</span>
+              <span class="chip chip-status live" role="listitem" data-i18n="status.live">En producción</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-d3">
+            <div class="proj-top">
+              <div class="proj-icon" aria-hidden="true">🏙️</div>
+              <div class="proj-links">
+                <a href="https://github.com/Arribas22/distrito-hispano-rp-showcase" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub showcase for Distrito Hispano RP">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="proj-name">Distrito Hispano RP</h3>
+            <p class="proj-platform" data-i18n="proj.platform.game">Arma Reforger · Servidor dedicado</p>
+            <p class="proj-desc" data-i18n="proj.dhrp.desc">Framework RP completo con 20+ sistemas interconectados en EnforceScript: economía real, facciones, telefonía, sistema policial y backend SQL propio con persistencia total.</p>
+            <div class="proj-tags" role="list">
+              <span class="chip" role="listitem">EnforceScript</span>
+              <span class="chip" role="listitem">progressSQL</span>
+              <span class="chip" role="listitem">RPC Client-Server</span>
+              <span class="chip chip-status live" role="listitem" data-i18n="status.live">En producción</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-d4">
+            <div class="proj-top">
+              <div class="proj-icon" aria-hidden="true">🎙️</div>
+              <div class="proj-links">
+                <a href="https://github.com/Arribas22/call-recorder-android" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub repository for CallRecorder">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="proj-name">CallRecorder</h3>
+            <p class="proj-platform" data-i18n="proj.platform.android">Android · Google Play</p>
+            <p class="proj-desc" data-i18n="proj.recorder.desc">Grabación de llamadas con enfoque en calidad de audio, estabilidad de servicio en background y compliance con normativas regionales.</p>
+            <div class="proj-tags" role="list">
+              <span class="chip" role="listitem">Kotlin</span>
+              <span class="chip" role="listitem">MediaRecorder</span>
+              <span class="chip" role="listitem">Foreground Service</span>
+              <span class="chip chip-status dev" role="listitem" data-i18n="status.dev">En desarrollo</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         STACK
+    ================================================ -->
+    <section id="stack" class="section section-alt" aria-labelledby="stack-title">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-num" aria-hidden="true">03</span>
+          <div>
+            <p class="section-label" data-i18n="stack.label">Stack Tecnológico</p>
+            <h2 class="section-title" id="stack-title" data-i18n="stack.title">Tecnologías y Herramientas</h2>
+          </div>
+        </header>
+
+        <div class="stack-grid">
+
+          <div class="stack-group reveal reveal-d1">
+            <h3 class="stack-group-title" data-i18n="stack.mobile">Mobile · Android</h3>
+            <div class="stack-chips" role="list">
+              <span class="chip chip-lg" role="listitem">Kotlin</span>
+              <span class="chip chip-lg" role="listitem">Jetpack Compose</span>
+              <span class="chip chip-lg" role="listitem">Material 3</span>
+              <span class="chip chip-lg" role="listitem">Room</span>
+              <span class="chip chip-lg" role="listitem">ViewModel</span>
+              <span class="chip chip-lg" role="listitem">WorkManager</span>
+              <span class="chip chip-lg" role="listitem">DataStore</span>
+              <span class="chip chip-lg" role="listitem">Navigation</span>
+              <span class="chip chip-lg" role="listitem">MediaPipe</span>
+              <span class="chip chip-lg" role="listitem">AdMob</span>
+              <span class="chip chip-lg" role="listitem">Play Billing</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal reveal-d2">
+            <h3 class="stack-group-title" data-i18n="stack.game">Game Engineering</h3>
+            <div class="stack-chips" role="list">
+              <span class="chip chip-lg" role="listitem">EnforceScript</span>
+              <span class="chip chip-lg" role="listitem">Enfusion Engine</span>
+              <span class="chip chip-lg" role="listitem">Arma Reforger</span>
+              <span class="chip chip-lg" role="listitem">Client-Server RPC</span>
+              <span class="chip chip-lg" role="listitem">EPF Persistence</span>
+              <span class="chip chip-lg" role="listitem">progressSQL</span>
+              <span class="chip chip-lg" role="listitem">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal reveal-d3">
+            <h3 class="stack-group-title" data-i18n="stack.infra">Infraestructura</h3>
+            <div class="stack-chips" role="list">
+              <span class="chip chip-lg" role="listitem">Windows Server</span>
+              <span class="chip chip-lg" role="listitem">VPS</span>
+              <span class="chip chip-lg" role="listitem">MySQL</span>
+              <span class="chip chip-lg" role="listitem">Apache</span>
+              <span class="chip chip-lg" role="listitem">XAMPP</span>
+              <span class="chip chip-lg" role="listitem">Firewall</span>
+              <span class="chip chip-lg" role="listitem">RDP</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal reveal-d4">
+            <h3 class="stack-group-title" data-i18n="stack.ai">IA &amp; Herramientas</h3>
+            <div class="stack-chips" role="list">
+              <span class="chip chip-lg chip-accent" role="listitem">GitHub Copilot</span>
+              <span class="chip chip-lg chip-accent" role="listitem">Claude</span>
+              <span class="chip chip-lg" role="listitem">VS Code</span>
+              <span class="chip chip-lg" role="listitem">Git</span>
+              <span class="chip chip-lg" role="listitem">MCP Servers</span>
+              <span class="chip chip-lg" role="listitem">Android Studio</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CONTACT
+    ================================================ -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-wrap reveal">
+          <p class="section-label" data-i18n="contact.label">Contacto</p>
+          <h2 class="contact-title" id="contact-title" data-i18n="contact.title">¿Hablamos?</h2>
+          <p class="contact-desc" data-i18n="contact.desc">
+            Abierto a proyectos de desarrollo Android, DevOps, game engineering y consultoría técnica. Tanto en español como en inglés.
+          </p>
+          <div class="contact-actions">
+            <a href="mailto:arribasaisystem@gmail.com" class="btn btn-primary" data-i18n="contact.cta">Enviar mensaje</a>
+            <a href="https://github.com/Arribas22" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              <svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <span class="footer-name">Álvaro Arribas</span>
+      <span class="footer-copy" data-i18n="footer.copy">Desarrollado con GitHub Copilot &amp; Claude · 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
