@@ -61,11 +61,11 @@
 
             <div class="hero-stats reveal reveal-d5" role="list" aria-label="Key stats">
               <div class="hero-stat" role="listitem">
-                <span class="stat-val">+10K</span>
+                <span class="stat-val">10K+</span>
                 <span class="stat-lbl" data-i18n="stat1">Horas en servidores de juego</span>
               </div>
               <div class="hero-stat" role="listitem">
-                <span class="stat-val">+2K</span>
+                <span class="stat-val">1.8K+</span>
                 <span class="stat-lbl" data-i18n="stat2">Horas con GitHub Copilot</span>
               </div>
               <div class="hero-stat" role="listitem">
@@ -130,6 +130,38 @@
       </div>
     </section>
 
+    <!-- ABOUT STRIP -->
+    <div class="about-strip">
+      <div class="container">
+        <ul class="about-list">
+          <li class="about-item">
+            <span class="about-val">ES · EN</span>
+            <span class="about-lbl" data-i18n="about.idiomas">Idiomas</span>
+          </li>
+          <li class="about-sep" aria-hidden="true"></li>
+          <li class="about-item">
+            <span class="about-val">UTC+1/+2</span>
+            <span class="about-lbl" data-i18n="about.tz">Zona horaria</span>
+          </li>
+          <li class="about-sep" aria-hidden="true"></li>
+          <li class="about-item">
+            <span class="about-val" data-i18n="about.modality">Remoto</span>
+            <span class="about-lbl" data-i18n="about.modality.lbl">Modalidad</span>
+          </li>
+          <li class="about-sep" aria-hidden="true"></li>
+          <li class="about-item">
+            <span class="about-val" data-i18n="about.focus">Android + Game Engineering</span>
+            <span class="about-lbl" data-i18n="about.focus.lbl">Áreas principales</span>
+          </li>
+          <li class="about-sep" aria-hidden="true"></li>
+          <li class="about-item">
+            <span class="about-val">GitHub Copilot + Claude</span>
+            <span class="about-lbl" data-i18n="about.ai.lbl">IA en cada proyecto</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <!-- ================================================
          EXPERIENCE
     ================================================ -->
@@ -169,6 +201,20 @@
               <span class="chip" role="listitem">ES · LATAM</span>
               <span class="chip chip-accent" role="listitem">500+ miembros</span>
             </div>
+            <div class="exp-metrics" role="list" aria-label="Key metrics">
+              <div class="exp-metric" role="listitem">
+                <span class="metric-n">20+</span>
+                <span class="metric-lbl" data-i18n="exp.e1.m1">sistemas activos</span>
+              </div>
+              <div class="exp-metric" role="listitem">
+                <span class="metric-n">500+</span>
+                <span class="metric-lbl" data-i18n="exp.e1.m2">miembros activos</span>
+              </div>
+              <div class="exp-metric" role="listitem">
+                <span class="metric-n">1 año+</span>
+                <span class="metric-lbl" data-i18n="exp.e1.m3">en producción</span>
+              </div>
+            </div>
           </article>
 
           <article class="exp-card reveal reveal-d2">
@@ -192,6 +238,20 @@
               <span class="chip" role="listitem">EnforceScript</span>
               <span class="chip" role="listitem">Arma Reforger</span>
               <span class="chip chip-accent" role="listitem">EN · International</span>
+            </div>
+            <div class="exp-metrics" role="list" aria-label="Key metrics">
+              <div class="exp-metric" role="listitem">
+                <span class="metric-n">EN</span>
+                <span class="metric-lbl" data-i18n="exp.e2.m1">comunidad</span>
+              </div>
+              <div class="exp-metric" role="listitem">
+                <span class="metric-n">1 año+</span>
+                <span class="metric-lbl" data-i18n="exp.e2.m2">en producción</span>
+              </div>
+              <div class="exp-metric" role="listitem">
+                <span class="metric-n">100%</span>
+                <span class="metric-lbl" data-i18n="exp.e2.m3">servidor dedicado</span>
+              </div>
             </div>
           </article>
 
@@ -321,10 +381,17 @@
         <div class="stack-grid">
 
           <div class="stack-group reveal reveal-d1">
-            <h3 class="stack-group-title" data-i18n="stack.mobile">Mobile · Android</h3>
+            <div class="stack-group-header">
+              <div class="stack-title-row">
+                <span class="stack-icon" aria-hidden="true">📱</span>
+                <h3 class="stack-group-title" data-i18n="stack.mobile">Mobile · Android</h3>
+              </div>
+              <span class="stack-level" data-i18n="stack.mobile.level">Especialidad principal</span>
+            </div>
+            <p class="stack-desc" data-i18n="stack.mobile.desc">Desarrollo nativo con Kotlin y Jetpack Compose. Apps publicadas en Google Play con IA on-device (Gemma/MediaPipe), arquitectura MVVM limpia y Room para persistencia offline.</p>
             <div class="stack-chips" role="list">
-              <span class="chip chip-lg" role="listitem">Kotlin</span>
-              <span class="chip chip-lg" role="listitem">Jetpack Compose</span>
+              <span class="chip chip-lg chip-primary" role="listitem">Kotlin</span>
+              <span class="chip chip-lg chip-primary" role="listitem">Jetpack Compose</span>
               <span class="chip chip-lg" role="listitem">Material 3</span>
               <span class="chip chip-lg" role="listitem">Room</span>
               <span class="chip chip-lg" role="listitem">ViewModel</span>
@@ -338,10 +405,17 @@
           </div>
 
           <div class="stack-group reveal reveal-d2">
-            <h3 class="stack-group-title" data-i18n="stack.game">Game Engineering</h3>
+            <div class="stack-group-header">
+              <div class="stack-title-row">
+                <span class="stack-icon" aria-hidden="true">🎮</span>
+                <h3 class="stack-group-title" data-i18n="stack.game">Game Engineering</h3>
+              </div>
+              <span class="stack-level" data-i18n="stack.game.level">Especialidad principal</span>
+            </div>
+            <p class="stack-desc" data-i18n="stack.game.desc">Frameworks RP completos en EnforceScript sobre Enfusion Engine. Arquitectura client-server con RPC, persistencia EPF/SQL y diseño de sistemas de juego a escala de producción.</p>
             <div class="stack-chips" role="list">
-              <span class="chip chip-lg" role="listitem">EnforceScript</span>
-              <span class="chip chip-lg" role="listitem">Enfusion Engine</span>
+              <span class="chip chip-lg chip-primary" role="listitem">EnforceScript</span>
+              <span class="chip chip-lg chip-primary" role="listitem">Enfusion Engine</span>
               <span class="chip chip-lg" role="listitem">Arma Reforger</span>
               <span class="chip chip-lg" role="listitem">Client-Server RPC</span>
               <span class="chip chip-lg" role="listitem">EPF Persistence</span>
@@ -351,9 +425,16 @@
           </div>
 
           <div class="stack-group reveal reveal-d3">
-            <h3 class="stack-group-title" data-i18n="stack.infra">Infraestructura</h3>
+            <div class="stack-group-header">
+              <div class="stack-title-row">
+                <span class="stack-icon" aria-hidden="true">🖥️</span>
+                <h3 class="stack-group-title" data-i18n="stack.infra">Infraestructura</h3>
+              </div>
+              <span class="stack-level" data-i18n="stack.infra.level">Configuración y despliegue</span>
+            </div>
+            <p class="stack-desc" data-i18n="stack.infra.desc">Administración de servidores Windows Server y VPS para entornos de juego y web. Configuración de BBDD, Apache, reglas de firewall y acceso remoto RDP.</p>
             <div class="stack-chips" role="list">
-              <span class="chip chip-lg" role="listitem">Windows Server</span>
+              <span class="chip chip-lg chip-primary" role="listitem">Windows Server</span>
               <span class="chip chip-lg" role="listitem">VPS</span>
               <span class="chip chip-lg" role="listitem">MySQL</span>
               <span class="chip chip-lg" role="listitem">Apache</span>
@@ -362,15 +443,26 @@
               <span class="chip chip-lg" role="listitem">RDP</span>
             </div>
           </div>
+              <span class="chip chip-lg" role="listitem">Firewall</span>
+              <span class="chip chip-lg" role="listitem">RDP</span>
+            </div>
+          </div>
 
           <div class="stack-group reveal reveal-d4">
-            <h3 class="stack-group-title" data-i18n="stack.ai">IA &amp; Herramientas</h3>
+            <div class="stack-group-header">
+              <div class="stack-title-row">
+                <span class="stack-icon" aria-hidden="true">🤖</span>
+                <h3 class="stack-group-title" data-i18n="stack.ai">IA &amp; Herramientas</h3>
+              </div>
+              <span class="stack-level stack-level-ai" data-i18n="stack.ai.level">Flujo de trabajo diario</span>
+            </div>
+            <p class="stack-desc" data-i18n="stack.ai.desc">Desarrollo asistido por IA desde el primer día. GitHub Copilot + Claude como pair programmer permanente. 1.8K+ horas de co-desarrollo documentadas. MCP Servers para contexto persistente.</p>
             <div class="stack-chips" role="list">
               <span class="chip chip-lg chip-accent" role="listitem">GitHub Copilot</span>
               <span class="chip chip-lg chip-accent" role="listitem">Claude</span>
+              <span class="chip chip-lg" role="listitem">MCP Servers</span>
               <span class="chip chip-lg" role="listitem">VS Code</span>
               <span class="chip chip-lg" role="listitem">Git</span>
-              <span class="chip chip-lg" role="listitem">MCP Servers</span>
               <span class="chip chip-lg" role="listitem">Android Studio</span>
             </div>
           </div>
