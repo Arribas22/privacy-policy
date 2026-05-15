@@ -7,25 +7,25 @@
   <meta name="description" content="Portfolio profesional de Alvaro Arribas: DevOps, Android, sistemas de servidores de juego, IA aplicada y arquitectura escalable." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #070d17;
-      --bg-soft: #0d1626;
-      --surface: #111d31;
-      --surface-2: #15233b;
-      --surface-3: #1a2a45;
-      --text: #eaf0fb;
-      --muted: #9db0cf;
-      --line: #263c63;
-      --accent: #4ecdc4;
-      --accent-2: #7aa2ff;
-      --accent-3: #ffc857;
-      --ok: #36d399;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      --radius-lg: 22px;
-      --radius-md: 14px;
-      --radius-sm: 10px;
+      --bg: #080808;
+      --bg-soft: #0e0e0e;
+      --surface: #141414;
+      --surface-2: #1a1a1a;
+      --surface-3: #202020;
+      --text: #f0ede8;
+      --muted: #7a7470;
+      --line: #2a2420;
+      --accent: #e8762a;
+      --accent-2: #f5a623;
+      --accent-3: #ef4444;
+      --ok: #22c55e;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      --radius-lg: 6px;
+      --radius-md: 4px;
+      --radius-sm: 3px;
       --max: 1180px;
     }
 
@@ -40,12 +40,11 @@
     }
 
     body {
-      font-family: "Manrope", sans-serif;
+      font-family: "Space Grotesk", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(900px 500px at 10% -10%, rgba(122, 162, 255, 0.22), transparent 60%),
-        radial-gradient(800px 500px at 90% -20%, rgba(78, 205, 196, 0.18), transparent 55%),
-        linear-gradient(180deg, #060b14 0%, var(--bg) 35%, #050912 100%);
+        radial-gradient(900px 500px at 50% -15%, rgba(232, 118, 42, 0.07), transparent 60%),
+        linear-gradient(180deg, #050505 0%, #080808 100%);
       line-height: 1.6;
     }
 
@@ -71,9 +70,9 @@
       align-items: center;
       justify-content: space-between;
       padding: 12px 16px;
-      border: 1px solid rgba(122, 162, 255, 0.3);
-      border-radius: 999px;
-      background: rgba(9, 16, 29, 0.72);
+      border: 1px solid rgba(232, 118, 42, 0.22);
+      border-radius: 4px;
+      background: rgba(8, 8, 8, 0.94);
       backdrop-filter: blur(12px);
       box-shadow: var(--shadow);
     }
@@ -83,9 +82,10 @@
       align-items: center;
       gap: 10px;
       font-weight: 700;
-      font-family: "Space Grotesk", sans-serif;
-      letter-spacing: 0.3px;
-      font-size: 0.95rem;
+      font-family: "Barlow Condensed", sans-serif;
+      letter-spacing: 0.12em;
+      font-size: 1rem;
+      text-transform: uppercase;
     }
 
     .brand-dot {
@@ -120,20 +120,21 @@
     }
 
     .nav-links a:hover {
-      color: var(--text);
-      border-color: rgba(122, 162, 255, 0.45);
-      background: rgba(122, 162, 255, 0.13);
+      color: var(--accent);
+      border-color: rgba(232, 118, 42, 0.45);
+      background: rgba(232, 118, 42, 0.1);
     }
 
     .lang-toggle {
-      border: 1px solid rgba(78, 205, 196, 0.45);
-      background: rgba(78, 205, 196, 0.12);
-      color: #dffdfa;
-      border-radius: 999px;
+      border: 1px solid rgba(232, 118, 42, 0.45);
+      background: rgba(232, 118, 42, 0.1);
+      color: #fde8ce;
+      border-radius: 3px;
       padding: 8px 12px;
       font-size: 0.8rem;
       cursor: pointer;
       font-weight: 700;
+      letter-spacing: 0.08em;
     }
 
     header {
@@ -151,7 +152,7 @@
     .hero-side {
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, rgba(17, 29, 49, 0.94), rgba(11, 19, 33, 0.9));
+      background: linear-gradient(145deg, rgba(20, 18, 16, 0.97), rgba(12, 10, 8, 0.95));
       box-shadow: var(--shadow);
     }
 
@@ -163,26 +164,30 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(122, 162, 255, 0.45);
-      background: rgba(122, 162, 255, 0.12);
-      color: #dce7ff;
-      font-size: 0.8rem;
-      padding: 7px 12px;
+      border-radius: 3px;
+      border: 1px solid rgba(232, 118, 42, 0.4);
+      background: rgba(232, 118, 42, 0.08);
+      color: #fde8ce;
+      font-size: 0.78rem;
+      padding: 6px 12px;
       margin-bottom: 18px;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-family: "Barlow Condensed", sans-serif;
     }
 
     h1 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2rem, 5vw, 3.3rem);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
       margin-bottom: 14px;
     }
 
     .accent {
-      background: linear-gradient(90deg, var(--accent), #7aa2ff 45%, #9f7aea 85%);
+      background: linear-gradient(90deg, var(--accent), var(--accent-2) 60%, #fcd34d 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -214,9 +219,10 @@
     }
 
     .btn-primary {
-      color: #06211f;
-      background: linear-gradient(120deg, var(--accent), #77efe6);
-      box-shadow: 0 10px 30px rgba(78, 205, 196, 0.35);
+      color: #1a0a00;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      box-shadow: 0 8px 28px rgba(232, 118, 42, 0.35);
+      border-radius: 4px;
     }
 
     .btn-primary:hover {
@@ -224,14 +230,15 @@
     }
 
     .btn-secondary {
-      border-color: rgba(122, 162, 255, 0.5);
-      color: #dfebff;
-      background: rgba(122, 162, 255, 0.08);
+      border-color: rgba(232, 118, 42, 0.45);
+      color: #fde8ce;
+      background: rgba(232, 118, 42, 0.07);
+      border-radius: 4px;
     }
 
     .btn-secondary:hover {
-      border-color: rgba(122, 162, 255, 0.85);
-      background: rgba(122, 162, 255, 0.16);
+      border-color: rgba(232, 118, 42, 0.85);
+      background: rgba(232, 118, 42, 0.15);
     }
 
     .hero-side {
@@ -243,17 +250,18 @@
     }
 
     .metric {
-      border: 1px solid rgba(122, 162, 255, 0.27);
-      border-radius: 12px;
+      border: 1px solid rgba(232, 118, 42, 0.2);
+      border-radius: 4px;
       padding: 12px 14px;
-      background: rgba(14, 24, 40, 0.75);
+      background: rgba(18, 14, 10, 0.8);
     }
 
     .metric strong {
       font-size: 1.15rem;
       display: block;
-      font-family: "Space Grotesk", sans-serif;
-      color: #d7f3ff;
+      font-family: "Barlow Condensed", sans-serif;
+      color: #fde8ce;
+      letter-spacing: 0.04em;
     }
 
     .metric span {
@@ -274,17 +282,18 @@
     .stat {
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
-      background: rgba(12, 21, 37, 0.9);
+      background: rgba(14, 12, 10, 0.95);
       padding: 14px;
       text-align: center;
     }
 
     .stat .value {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.25rem;
-      color: #d9f4ff;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.4rem;
+      color: var(--accent);
       display: block;
       margin-bottom: 4px;
+      letter-spacing: 0.04em;
     }
 
     .stat .label {
@@ -299,25 +308,32 @@
     .section-shell {
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, rgba(15, 25, 43, 0.94), rgba(10, 16, 29, 0.9));
+      background: linear-gradient(145deg, rgba(18, 16, 14, 0.97), rgba(10, 9, 8, 0.95));
       padding: 28px;
     }
 
     .section-label {
-      color: #86b7ff;
+      color: var(--accent);
       text-transform: uppercase;
       font-size: 0.73rem;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.18em;
       font-weight: 700;
       margin-bottom: 8px;
+      font-family: "Barlow Condensed", sans-serif;
+    }
+
+    .section-label::before {
+      content: "// ";
+      opacity: 0.7;
     }
 
     .section-title {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.5rem, 2.8vw, 2.25rem);
-      line-height: 1.2;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+      line-height: 1.1;
       margin-bottom: 10px;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
 
     .section-desc {
@@ -335,7 +351,7 @@
     .card {
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
-      background: linear-gradient(160deg, rgba(17, 30, 51, 0.95), rgba(13, 22, 37, 0.93));
+      background: linear-gradient(160deg, rgba(20, 18, 15, 0.98), rgba(14, 12, 10, 0.96));
       padding: 18px;
       transition: transform 0.2s ease, border-color 0.2s ease;
       position: relative;
@@ -349,14 +365,14 @@
       width: 220px;
       height: 220px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(122, 162, 255, 0.2), transparent 70%);
+      background: radial-gradient(circle, rgba(232, 118, 42, 0.15), transparent 70%);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-2px);
-      border-color: rgba(122, 162, 255, 0.58);
+      border-color: rgba(232, 118, 42, 0.5);
     }
 
     .card:hover::before {
@@ -381,14 +397,15 @@
 
     .tag {
       display: inline-block;
-      border-radius: 999px;
-      border: 1px solid rgba(122, 162, 255, 0.35);
-      background: rgba(122, 162, 255, 0.1);
+      border-radius: 3px;
+      border: 1px solid rgba(232, 118, 42, 0.3);
+      background: rgba(232, 118, 42, 0.08);
       font-size: 0.72rem;
-      color: #cfe0ff;
+      color: #fde8ce;
       padding: 3px 8px;
       margin: 8px 6px 0 0;
       font-weight: 600;
+      letter-spacing: 0.04em;
     }
 
     .systems-list {
@@ -400,10 +417,10 @@
     }
 
     .systems-list li {
-      border: 1px solid rgba(78, 205, 196, 0.3);
-      border-radius: 10px;
-      background: rgba(78, 205, 196, 0.1);
-      color: #c9fff9;
+      border: 1px solid rgba(232, 118, 42, 0.28);
+      border-radius: 4px;
+      background: rgba(232, 118, 42, 0.07);
+      color: #fde8ce;
       padding: 8px 10px;
       font-size: 0.84rem;
       font-weight: 600;
@@ -426,26 +443,27 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 999px;
-      border: 1px solid rgba(122, 162, 255, 0.45);
-      background: rgba(122, 162, 255, 0.08);
-      color: #d7e5ff;
+      border-radius: 3px;
+      border: 1px solid rgba(232, 118, 42, 0.4);
+      background: rgba(232, 118, 42, 0.07);
+      color: #fde8ce;
       font-size: 0.75rem;
       font-weight: 700;
       padding: 5px 10px;
       transition: 0.2s ease;
+      letter-spacing: 0.04em;
     }
 
     .project-link:hover {
-      border-color: rgba(78, 205, 196, 0.6);
-      background: rgba(78, 205, 196, 0.12);
-      color: #d8fffb;
+      border-color: rgba(232, 118, 42, 0.75);
+      background: rgba(232, 118, 42, 0.15);
+      color: #fff3e0;
     }
 
     .project-link.primary {
-      border-color: rgba(78, 205, 196, 0.6);
-      background: rgba(78, 205, 196, 0.12);
-      color: #d8fffb;
+      border-color: rgba(245, 166, 35, 0.6);
+      background: rgba(245, 166, 35, 0.12);
+      color: #fff3e0;
     }
 
     .systems-evidence {
@@ -484,11 +502,11 @@
 
     .phone-frame {
       width: 100%;
-      border-radius: 20px;
-      border: 1px solid rgba(122, 162, 255, 0.45);
-      background: linear-gradient(160deg, rgba(19, 33, 57, 0.95), rgba(14, 24, 42, 0.9));
+      border-radius: 16px;
+      border: 1px solid rgba(232, 118, 42, 0.35);
+      background: linear-gradient(160deg, rgba(22, 18, 14, 0.98), rgba(14, 12, 10, 0.95));
       padding: 8px;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
       transition: transform 0.2s ease;
       aspect-ratio: 9 / 19;
       display: flex;
@@ -512,9 +530,9 @@
     .placeholder-screen {
       width: 100%;
       height: 100%;
-      border-radius: 14px;
-      background: linear-gradient(145deg, #1a2b48, #13233b);
-      color: #cde2ff;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #1a1410, #120f0b);
+      color: #fde8ce;
       display: none;
       align-items: center;
       justify-content: center;
@@ -537,19 +555,19 @@
     }
 
     .tool-chip {
-      border-radius: 999px;
+      border-radius: 3px;
       border: 1px solid var(--line);
       padding: 7px 10px;
       font-size: 0.8rem;
-      color: #d7e5ff;
-      background: rgba(22, 36, 59, 0.82);
+      color: #e0d8d0;
+      background: rgba(22, 18, 14, 0.9);
       font-weight: 600;
     }
 
     .tool-primary {
-      border-color: rgba(78, 205, 196, 0.5);
-      background: rgba(78, 205, 196, 0.14);
-      color: #cffffb;
+      border-color: rgba(232, 118, 42, 0.45);
+      background: rgba(232, 118, 42, 0.1);
+      color: #fde8ce;
     }
 
     .db-timeline {
@@ -561,8 +579,8 @@
 
     .db-step {
       border: 1px solid var(--line);
-      border-radius: 12px;
-      background: rgba(15, 26, 45, 0.92);
+      border-radius: 4px;
+      background: rgba(16, 14, 12, 0.95);
       padding: 12px;
       min-width: 220px;
       flex: 1;
@@ -596,11 +614,16 @@
     .cert-card {
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
-      background: linear-gradient(145deg, rgba(16, 27, 45, 0.96), rgba(12, 20, 35, 0.92));
+      background: linear-gradient(145deg, rgba(20, 17, 14, 0.98), rgba(14, 12, 10, 0.95));
       padding: 16px;
       display: flex;
       align-items: flex-start;
       gap: 12px;
+      transition: border-color 0.2s ease;
+    }
+
+    .cert-card:hover {
+      border-color: rgba(232, 118, 42, 0.4);
     }
 
     .cert-logo {
@@ -610,12 +633,13 @@
     }
 
     .cert-issuer {
-      font-size: 0.76rem;
-      color: var(--muted);
+      font-size: 0.73rem;
+      color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       margin-bottom: 4px;
       font-weight: 700;
+      font-family: "Barlow Condensed", sans-serif;
     }
 
     .cert-title {
@@ -632,40 +656,49 @@
 
     .cert-badge {
       display: inline-block;
-      border-radius: 999px;
-      border: 1px solid rgba(54, 211, 153, 0.45);
-      background: rgba(54, 211, 153, 0.14);
-      color: #cbffea;
+      border-radius: 3px;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      background: rgba(34, 197, 94, 0.1);
+      color: #a7f3d0;
       font-size: 0.72rem;
       font-weight: 700;
       padding: 4px 9px;
       margin-right: 8px;
+      letter-spacing: 0.06em;
     }
 
     .cert-link {
       display: inline-block;
-      border-radius: 8px;
-      border: 1px solid rgba(122, 162, 255, 0.45);
-      background: rgba(122, 162, 255, 0.1);
-      color: #d8e7ff;
+      border-radius: 3px;
+      border: 1px solid rgba(232, 118, 42, 0.4);
+      background: rgba(232, 118, 42, 0.08);
+      color: #fde8ce;
       font-size: 0.76rem;
       font-weight: 700;
       padding: 5px 8px;
       margin-top: 8px;
+      transition: 0.2s ease;
+    }
+
+    .cert-link:hover {
+      border-color: rgba(232, 118, 42, 0.75);
+      background: rgba(232, 118, 42, 0.15);
     }
 
     .contact {
       text-align: center;
-      border: 1px solid rgba(78, 205, 196, 0.45);
-      background: linear-gradient(145deg, rgba(13, 25, 41, 0.95), rgba(9, 16, 30, 0.92));
+      border: 1px solid rgba(232, 118, 42, 0.35);
+      background: linear-gradient(145deg, rgba(18, 14, 10, 0.97), rgba(10, 8, 6, 0.95));
       border-radius: var(--radius-lg);
       padding: 36px 18px;
       box-shadow: var(--shadow);
     }
 
     .contact h2 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
       margin-bottom: 8px;
     }
 
@@ -677,10 +710,10 @@
 
     .contact-email {
       display: inline-block;
-      border-radius: 999px;
-      border: 1px solid rgba(78, 205, 196, 0.45);
-      background: rgba(78, 205, 196, 0.12);
-      color: #d8fffb;
+      border-radius: 3px;
+      border: 1px solid rgba(232, 118, 42, 0.45);
+      background: rgba(232, 118, 42, 0.1);
+      color: #fde8ce;
       padding: 8px 14px;
       font-weight: 700;
       margin-bottom: 14px;
