@@ -1234,6 +1234,7 @@ h1, h2, h3   { line-height: 1.1; }
 .reveal-d4 { transition-delay: 0.32s; }
 .reveal-d5 { transition-delay: 0.40s; }
 .reveal-d6 { transition-delay: 0.48s; }
+.reveal-d7 { transition-delay: 0.56s; }
 
 /* ============================================================
    RESPONSIVE — 1000px
