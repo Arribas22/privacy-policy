@@ -27,7 +27,7 @@ const translations = {
     'exp.title':    'Lead Developer en Producción',
     'exp.e1.role':  'Lead Developer',
     'exp.e1.date':  '2024 — Presente',
-    'exp.e1.body':  'Responsable técnico único del framework RP en EnforceScript para la comunidad hispanohablante más completa de Arma Reforger. 20+ sistemas en producción: economía, inventario, facciones, telefonía, policial y persistencia. Backend escalado de JSON → MongoDB → progressSQL.',
+    'exp.e1.body':  'Responsable técnico único del framework RP en EnforceScript para la comunidad hispanohablante más completa de Arma Reforger. +20 sistemas en producción: economía, inventario, facciones, telefonía, policial y persistencia. Backend escalado de JSON → MongoDB → progressSQL.',
     'exp.e2.role':  'Lead Developer',
     'exp.e2.date':  '2024 — Presente',
     'exp.e2.body':  'Lead Developer del servidor de roleplay de habla inglesa en Arma Reforger. Diseño e implementación del framework técnico, sistemas de juego y arquitectura de backend para la comunidad internacional.',
@@ -39,7 +39,7 @@ const translations = {
     'proj.platform.game':    'Arma Reforger · Servidor dedicado',
     'proj.mindease.desc':    'App de bienestar mental con IA local (Gemma 3 1B offline), ejercicios CBT, análisis de estado emocional y diseño orientado a privacidad total.',
     'proj.desvio.desc':      'Automatización de reglas de desvío de llamadas basadas en horarios y perfiles configurables. Lógica en background con WorkManager, sin permisos innecesarios.',
-    'proj.dhrp.desc':        'Framework RP completo con 20+ sistemas interconectados en EnforceScript: economía real, facciones, telefonía, sistema policial y backend SQL propio con persistencia total.',
+    'proj.dhrp.desc':        'Framework RP completo con +20 sistemas interconectados en EnforceScript: economía real, facciones, telefonía, sistema policial y backend SQL propio con persistencia total.',
     'proj.recorder.desc':    'Grabación de llamadas con enfoque en calidad de audio, estabilidad de servicio en background y compliance con normativas regionales.',
 
     'status.live': 'En producción',
@@ -59,7 +59,7 @@ const translations = {
     'stack.infra.level':  'Configuración y despliegue',
     'stack.infra.desc':   'Administración de servidores Windows Server y VPS para entornos de juego y web. Configuración de BBDD, Apache, reglas de firewall y acceso remoto RDP.',
     'stack.ai.level':     'Flujo de trabajo diario',
-    'stack.ai.desc':      'Desarrollo asistido por IA desde el primer día. GitHub Copilot + Claude como pair programmer permanente. 1.8K+ horas de co-desarrollo documentadas. MCP Servers para contexto persistente.',
+    'stack.ai.desc':      'Desarrollo asistido por IA desde el primer día. GitHub Copilot + Claude como pair programmer permanente. +1.800 horas de co-desarrollo documentadas. MCP Servers para contexto persistente.',
 
     'about.idiomas':      'Idiomas',
     'about.tz':           'Zona horaria',
@@ -104,7 +104,7 @@ const translations = {
     'exp.title':    'Lead Developer in Production',
     'exp.e1.role':  'Lead Developer',
     'exp.e1.date':  '2024 — Present',
-    'exp.e1.body':  'Sole technical lead for the EnforceScript RP framework powering the most complete Spanish-speaking Arma Reforger community. 20+ systems in production: economy, inventory, factions, phone, police and persistence. Backend scaled from JSON → MongoDB → progressSQL.',
+    'exp.e1.body':  'Sole technical lead for the EnforceScript RP framework powering the most complete Spanish-speaking Arma Reforger community. +20 systems in production: economy, inventory, factions, phone, police and persistence. Backend scaled from JSON → MongoDB → progressSQL.',
     'exp.e2.role':  'Lead Developer',
     'exp.e2.date':  '2024 — Present',
     'exp.e2.body':  'Lead Developer for the English-speaking Arma Reforger roleplay server. Design and implementation of the technical framework, game systems and backend architecture for the international community.',
@@ -116,7 +116,7 @@ const translations = {
     'proj.platform.game':    'Arma Reforger · Dedicated Server',
     'proj.mindease.desc':    'Mental wellness app with local AI (Gemma 3 1B offline), CBT exercises, emotional state analysis and total privacy-first design.',
     'proj.desvio.desc':      'Call forwarding automation based on schedules and configurable profiles. Background logic with WorkManager, minimal permissions.',
-    'proj.dhrp.desc':        'Full RP framework with 20+ interconnected systems in EnforceScript: real economy, factions, phone, police system and custom SQL backend with full persistence.',
+    'proj.dhrp.desc':        'Full RP framework with +20 interconnected systems in EnforceScript: real economy, factions, phone, police system and custom SQL backend with full persistence.',
     'proj.recorder.desc':    'Call recording focused on audio quality, background service stability and regional legal compliance.',
 
     'status.live': 'In production',
@@ -136,7 +136,7 @@ const translations = {
     'stack.infra.level':  'Setup & deployment',
     'stack.infra.desc':   'Windows Server and VPS administration for game and web environments. Database setup, Apache, firewall rules and RDP remote access.',
     'stack.ai.level':     'Daily workflow',
-    'stack.ai.desc':      'AI-augmented development from day one. GitHub Copilot + Claude as permanent pair programmer. 1.8K+ co-development hours documented. MCP Servers for persistent context.',
+    'stack.ai.desc':      'AI-augmented development from day one. GitHub Copilot + Claude as permanent pair programmer. +1,800 co-development hours documented. MCP Servers for persistent context.',
 
     'about.idiomas':      'Languages',
     'about.tz':           'Timezone',
