@@ -41,6 +41,7 @@ const translations = {
     'proj.desvio.desc':      'Automatización de reglas de desvío de llamadas basadas en horarios y perfiles configurables. Lógica en background con WorkManager, sin permisos innecesarios.',
     'proj.dhrp.desc':        'Framework RP completo con +20 sistemas interconectados en EnforceScript: economía real, facciones, telefonía, sistema policial y backend SQL propio con persistencia total.',
     'proj.recorder.desc':    'Grabación de llamadas con enfoque en calidad de audio, estabilidad de servicio en background y compliance con normativas regionales.',
+    'proj.notificationsilence.desc': 'Bloqueo inteligente de notificaciones por app, categoría y horario. Incluye modo premium con compra única o desbloqueo temporal mediante anuncios bonificados.',
 
     'status.live': 'En producción',
     'status.dev':  'En desarrollo',
@@ -118,6 +119,7 @@ const translations = {
     'proj.desvio.desc':      'Call forwarding automation based on schedules and configurable profiles. Background logic with WorkManager, minimal permissions.',
     'proj.dhrp.desc':        'Full RP framework with +20 interconnected systems in EnforceScript: real economy, factions, phone, police system and custom SQL backend with full persistence.',
     'proj.recorder.desc':    'Call recording focused on audio quality, background service stability and regional legal compliance.',
+    'proj.notificationsilence.desc': 'Smart notification blocking by app, category, and schedule. Includes premium mode with one-time purchase or temporary unlock through rewarded ads.',
 
     'status.live': 'In production',
     'status.dev':  'In development',
